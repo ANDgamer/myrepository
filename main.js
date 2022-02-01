@@ -21,7 +21,9 @@ openersMenu.forEach((btn, n) => {
 const saves = document.querySelectorAll(".save")
 
 saves.forEach(save => {
-	save.addEventListener("click", () => {
+	save.addEventListener("click", (e) => {
+
+		if (e.target.tagName === "H2") return
 
 		saves.forEach(i => {
 			if (i.classList.contains("active") &&
