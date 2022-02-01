@@ -156,6 +156,7 @@ ul {
 	border-radius: 5px;
 }
 
+
 .save_main-body {
 	width: 55vw;
 	display: flex;
@@ -187,12 +188,28 @@ ul {
 	width: 55vw;
 	display: none;
 	justify-content: space-evenly;
-	margin-top: 1.2vh;
+	margin-top: -3.8vh;
 	padding-bottom: 1.2vh;
+	opacity: 0;
 }
 
 .save.active .save_toolbar {
 	display: flex;
+	animation: activated .3s;
+	margin-top: 1.2vh;
+	opacity: 1;
+}
+
+@keyframes activated {
+	from {
+		margin-top: -3.8vh;
+		opacity: 0;
+	}
+
+	to {
+		margin-top: 1.2vh;
+		opacity: 1;
+	}
 }
 
 .save_toolbar h1,

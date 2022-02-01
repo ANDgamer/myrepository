@@ -22,15 +22,16 @@ const saveBtns = document.querySelectorAll(".save_main-body h2")
 
 saveBtns.forEach(btn => {
 	btn.addEventListener("click", () => {
+		const save = btn.closest(".save")
 
 		saveBtns.forEach(i => {
-			const save = i.closest(".save")
-			if (save.classList.contains("active")) {
-				save.classList.remove("active")
+			const nSave = i.closest(".save")
+			if (nSave.classList.contains("active") &&
+				nSave !== save) {
+				nSave.classList.remove("active")
 			}
 		})
 
-		const save = btn.closest(".save")
 		if (!save.classList.contains("active")) {
 			save.classList.add("active")
 		}
