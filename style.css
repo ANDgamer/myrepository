@@ -21,7 +21,7 @@ body {
 }
 
 body {
-	background-image: url(images/main_background.jpg);
+	background-image: url("images/main_background.jpg");
 	background-size: cover;
 }
 
@@ -67,14 +67,18 @@ ul {
 	position: relative;
 	width: 60vw;
 	background-color: rgba(180, 180, 180, 0.99);
-	transform: translateX(-60vw);
+	transform: translateX(0vw);
 	transition: transform .3s;
 	height: 93vh;
+	left: -60vw;
 }
 
 .menu__wrapper.open {
-	transform: translateX(0vw);
+	transform: translateX(60vw);
 }
+
+/*------------------------------------------ themes -----------------------------------------------*/
+
 
 .themes {
 	width: 60vw;
@@ -127,6 +131,9 @@ ul {
 	background-color: rgba(0, 0, 0, 0.5);
 }
 
+/*------------------------------------------ saves -----------------------------------------------*/
+
+
 .saves {
 	width: 55vw;
 	text-align: center;
@@ -144,10 +151,11 @@ ul {
 	margin-top: 0.5vh;
 }
 
-.saves .save:nth-child(3) {
+.save.active {
 	background-color: rgba(220, 220, 220, 1);
 	border-radius: 5px;
 }
+
 
 .save_main-body {
 	width: 55vw;
@@ -178,10 +186,30 @@ ul {
 
 .save_toolbar {
 	width: 55vw;
-	display: flex;
+	display: none;
 	justify-content: space-evenly;
-	margin-top: 1.2vh;
+	margin-top: -3.8vh;
 	padding-bottom: 1.2vh;
+	opacity: 0;
+}
+
+.save.active .save_toolbar {
+	display: flex;
+	animation: activated .3s;
+	margin-top: 1.2vh;
+	opacity: 1;
+}
+
+@keyframes activated {
+	from {
+		margin-top: -3.8vh;
+		opacity: 0;
+	}
+
+	to {
+		margin-top: 1.2vh;
+		opacity: 1;
+	}
 }
 
 .save_toolbar h1,
@@ -205,14 +233,15 @@ ul {
 	position: relative;
 	width: 60vw;
 	background-color: white;
-	transform: translateX(17vw);
+	transform: translateX(0vw);
 	transition: transform .3s;
 	height: 93vh;
 	background-color: rgba(180, 180, 180, 0.99);
+	right: -17vw;
 }
 
 .plus__wrapper.open {
-	transform: translateX(-43vw);
+	transform: translateX(-60vw);
 }
 
 
