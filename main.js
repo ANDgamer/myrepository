@@ -17,3 +17,22 @@ btns.forEach((i, n) => {
 		menu.classList.toggle("open")
 	})
 })
+
+const saveBtns = document.querySelectorAll(".save_main-body h2")
+
+saveBtns.forEach(btn => {
+	btn.addEventListener("click", () => {
+
+		saveBtns.forEach(i => {
+			const save = i.closest(".save")
+			if (save.classList.contains("active")) {
+				save.classList.remove("active")
+			}
+		})
+
+		const save = btn.closest(".save")
+		if (!save.classList.contains("active")) {
+			save.classList.add("active")
+		}
+	})
+})
