@@ -35,7 +35,7 @@ ul {
 	top: 0;
 	width: 100vw;
 	height: 7vh;
-	background-color: rgba( 255, 255, 255, 0.7);
+	background-color: rgba(255, 255, 255, 0.7);
 	display: flex;
 	color: black;
 }
@@ -47,7 +47,7 @@ ul {
 	width: 20%;
 }
 
-.menu_icon{
+.menu_icon {
 	width: 15% !important;
 }
 
@@ -76,16 +76,16 @@ ul {
 	transform: translateX(0vw);
 }
 
-.thems{
+.themes {
 	width: 60vw;
 	text-align: center;
 }
 
-.thems_icons h1{
+.themes_icons h1 {
 	cursor: pointer;
 }
 
-.thems h1{
+.themes h1 {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.8vh;
 	padding-top: 1vh;
@@ -96,37 +96,38 @@ ul {
 	padding-right: 4vw;
 }
 
-.thems_icons{
+.themes_icons {
 	width: 60vw;
 	display: flex;
 	justify-content: space-evenly;
 }
 
-.thems_icons h1{
+.themes_icons h1 {
 	font-size: 2.4vh;
 	border-radius: 1vh;
 }
 
-.white-theme_icon, .black-theme_icon{
+.white-theme_icon,
+.black-theme_icon {
 	padding-bottom: 1vh;
 	border-bottom: 0.3vh solid black;
 }
 
-.black-theme_icon{
+.black-theme_icon {
 	border: 0 !important;
 }
 
-.white-theme_icon h1{
+.white-theme_icon h1 {
 	color: rgb(0, 0, 0);
-	background-color: rgba(255 , 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.5);
 }
 
-.black-theme_icon h1{
+.black-theme_icon h1 {
 	color: rgb(255, 255, 255);
-	background-color: rgba(0 , 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 }
 
-.saves{
+.saves {
 	width: 55vw;
 	text-align: center;
 	margin-top: 1vh;
@@ -134,21 +135,21 @@ ul {
 	padding-right: 2.5vw;
 }
 
-.saves h1{
+.saves h1 {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.8vh;
 }
 
-.save{
+.save {
 	margin-top: 0.5vh;
 }
 
-.saves .save:nth-child(3){
+.saves .save:nth-child(3) {
 	background-color: rgba(220, 220, 220, 1);
 	border-radius: 5px;
 }
 
-.save_main-body{
+.save_main-body {
 	width: 55vw;
 	display: flex;
 	justify-content: left;
@@ -156,15 +157,15 @@ ul {
 	cursor: pointer;
 }
 
-.save i{
+.save i {
 	font-size: 2.6vh;
 }
 
-.save h1{
+.save h1 {
 	font-size: 2.4vh;
 }
 
-.save h2{
+.save h2 {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	cursor: pointer;
 	font-size: 2.2vh;
@@ -175,7 +176,7 @@ ul {
 	margin-left: auto;
 }
 
-.save_toolbar{
+.save_toolbar {
 	width: 55vw;
 	display: flex;
 	justify-content: space-evenly;
@@ -183,7 +184,8 @@ ul {
 	padding-bottom: 1.2vh;
 }
 
-.save_toolbar h1, .save_toolbar h2{
+.save_toolbar h1,
+.save_toolbar h2 {
 	font-size: 2.2vh;
 	border: 0 !important;
 	border-radius: 5px;
