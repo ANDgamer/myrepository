@@ -18,22 +18,18 @@ openersMenu.forEach((btn, n) => {
 
 
 // Saves activation
-const saveBtns = document.querySelectorAll(".save_main-body h2")
+const saves = document.querySelectorAll(".save")
 
-saveBtns.forEach(btn => {
-	btn.addEventListener("click", () => {
-		const save = btn.closest(".save")
+saves.forEach(save => {
+	save.addEventListener("click", () => {
 
-		saveBtns.forEach(i => {
-			const nSave = i.closest(".save")
-			if (nSave.classList.contains("active") &&
-				nSave !== save) {
-				nSave.classList.remove("active")
+		saves.forEach(i => {
+			if (i.classList.contains("active") &&
+				i !== save) {
+				i.classList.remove("active")
 			}
 		})
 
-		if (!save.classList.contains("active")) {
-			save.classList.add("active")
-		}
+		save.classList.toggle("active")
 	})
 })
