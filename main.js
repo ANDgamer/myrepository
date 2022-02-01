@@ -29,7 +29,14 @@ saves.forEach(save => {
 				i.classList.remove("active")
 			}
 		})
-
+		if (save.classList.contains("active")) {
+			save.classList.remove("active")
+			save.classList.add("disactive")
+			setTimeout(() => {
+				save.classList.remove("disactive")
+			}, 200)
+			return
+		}
 		save.classList.toggle("active")
 	})
 })
