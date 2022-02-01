@@ -17,5 +17,3 @@ btns.forEach((i, n) => {
 		menu.classList.toggle("open")
 	})
 })
-
-//TODO: HACK YOU ASS Two Times
