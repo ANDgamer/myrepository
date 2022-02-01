@@ -1,16 +1,14 @@
-const btns = [".fa-bars", ".fa-plus"]
-const menus = [".menu__wrapper", ".plus__wrapper"]
+const openersMenu = document.querySelectorAll(".opener")
+const menus = document.querySelectorAll(".menu")
 
-btns.forEach((i, n) => {
-	let btn = document.querySelector(i)
+// Menus toogle show
+openersMenu.forEach((btn, n) => {
 	btn.addEventListener("click", () => {
-		let menu = document.querySelector(menus[n])
+		let menu = btn.parentNode.querySelector(".menu")
 
-		menus.forEach(s => {
-			let iMenu = document.querySelector(s)
-
-			if (iMenu.classList.contains("open") && s !== menus[n]) {
-				iMenu.classList.remove("open")
+		menus.forEach(nMenu => {
+			if (nMenu.classList.contains("open") && nMenu !== menu) {
+				nMenu.classList.remove("open")
 			}
 		})
 
@@ -18,6 +16,8 @@ btns.forEach((i, n) => {
 	})
 })
 
+
+// Saves activation
 const saveBtns = document.querySelectorAll(".save_main-body h2")
 
 saveBtns.forEach(btn => {
