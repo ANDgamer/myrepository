@@ -149,11 +149,13 @@ ul {
 
 .save {
 	margin-top: 0.5vh;
+	transition: background-color .2s;
+	border-radius: 5px;
 }
 
 .save.active {
 	background-color: rgba(220, 220, 220, 1);
-	border-radius: 5px;
+	transition: background-color .2s;
 }
 
 
@@ -195,12 +197,18 @@ ul {
 
 .save.active .save_toolbar {
 	display: flex;
-	animation: activated .3s;
+	animation: switchOn .3s;
 	margin-top: 1.2vh;
 	opacity: 1;
+
 }
 
-@keyframes activated {
+.save.disactive .save_toolbar {
+	animation: switchOFF .3s;
+	display: flex;
+}
+
+@keyframes switchOn {
 	from {
 		margin-top: -3.8vh;
 		opacity: 0;
@@ -212,7 +220,22 @@ ul {
 	}
 }
 
-.save_toolbar h1,
+@keyframes switchOFF {
+
+	0% {
+		margin-top: 1.2vh;
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: -3.8vh;
+	}
+}
+
 .save_toolbar h2 {
 	font-size: 2.2vh;
 	border: 0 !important;
