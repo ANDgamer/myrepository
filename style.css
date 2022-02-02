@@ -306,6 +306,12 @@ ul {
 	margin-left: auto;
 }
 
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+ 	margin: 0; 
+}
+
 .plus__wrapper h3{
 	font-size: 2.4vh;
 	text-align: center;
