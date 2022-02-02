@@ -67,7 +67,7 @@ ul {
 .menu__wrapper {
 	position: relative;
 	width: 60vw;
-	background-color: rgba(180, 180, 180, 0.99);
+	background-color: rgba(200, 200, 200, 0.99);
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: 93vh;
@@ -270,7 +270,7 @@ ul {
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: 93vh;
-	background-color: rgba(180, 180, 180, 0.99);
+	background-color: rgba(200, 200, 200, 0.99);
 	right: -17vw;
 }
 
