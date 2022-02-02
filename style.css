@@ -142,9 +142,23 @@ ul {
 	padding-right: 2.5vw;
 }
 
+.saves__head{
+	width: 100%;
+	display: flex;
+}
+
+.saves__head i{
+	font-size: 2.6vh;
+	position: fixed;
+	cursor: pointer;
+	margin-left: 2vw;
+}
+
 .saves h1 {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.8vh;
+	width: 100%;
+	text-align: center;
 }
 
 .save {
@@ -157,7 +171,6 @@ ul {
 	background-color: rgba(220, 220, 220, 1);
 	transition: background-color .2s;
 }
-
 
 .save_main-body {
 	width: 55vw;
@@ -270,6 +283,8 @@ ul {
 
 
 
+
+
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
@@ -295,11 +310,23 @@ ul {
 	height: 92vh;
 }
 
+.elements__head{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.elements__head i{
+	font-size: 3.5vh;
+}
+
 .elements__title {
 	font-size: 5vh;
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	margin: 0;
 	text-align: center;
+	margin-right: 3vh;
+	margin-left: 3vh;
 }
 
 .elements__list {
