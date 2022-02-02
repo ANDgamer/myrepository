@@ -306,7 +306,7 @@ ul {
 	width: 2.8vh;
 	height: 2.8vh;
 	margin-left: auto;
-	border-radius: 10px;
+	border-radius: 5px;
 }
 
 .plus__wrapper_manual h3{
@@ -320,7 +320,6 @@ ul {
 	border-radius: 1vh;
 	width: fit-content;
 }
-
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
