@@ -1,4 +1,5 @@
 /*-------------------------------------------- html -----------------------------------------------*/
+
 *,
 *:after,
 *:before {
@@ -79,7 +80,6 @@ ul {
 
 /*------------------------------------------ themes -----------------------------------------------*/
 
-
 .themes {
 	width: 60vw;
 	text-align: center;
@@ -132,7 +132,6 @@ ul {
 }
 
 /*------------------------------------------ saves -----------------------------------------------*/
-
 
 .saves {
 	width: 55vw;
@@ -262,7 +261,6 @@ ul {
 	background-color: rgba(180, 180, 180, 1);
 }
 
-
 /* -------------------------------------------------------------- */
 
 .plus__wrapper {
@@ -287,7 +285,7 @@ ul {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
-.plus__wrapper_manual h1{
+.plus__wrapper h1{
 	width: 100%;
 	text-align: center;
 	font-size: 2.8vh;
@@ -302,14 +300,13 @@ ul {
 	font-size: 2.4vh;
 }
 
-.plus__wrapper_checkbox{
+.plus__wrapper_checkbox, .plus__wrapper_number{
 	width: 2.8vh;
 	height: 2.8vh;
 	margin-left: auto;
-	border-radius: 5px;
 }
 
-.plus__wrapper_manual h3{
+.plus__wrapper h3{
 	font-size: 2.4vh;
 	text-align: center;
 	color: rgb(0, 0, 0);
@@ -319,7 +316,25 @@ ul {
 	padding-right: 4vw;
 	border-radius: 1vh;
 	width: fit-content;
+	cursor: pointer;
 }
+
+.plus__wrapper_random{
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	width: 100%;
+	text-align: center;
+	font-size: 2.8vh;
+	margin-top: 1vh;
+	width: 55vw;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+}
+
+.plus__wrapper_random>div{
+	display: flex;
+	align-items: center;
+}
+
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
