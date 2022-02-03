@@ -22,7 +22,7 @@ body {
 }
 
 body {
-	background-image: url("images/main_background.jpg");
+	background-image: url("images/one_main_background.jpg");
 	background-size: cover;
 }
 
@@ -72,6 +72,7 @@ ul {
 	transition: transform .3s;
 	height: 93vh;
 	left: -60vw;
+	z-index: 1;
 }
 
 .menu__wrapper.open {
@@ -272,6 +273,7 @@ ul {
 	height: 93vh;
 	background-color: rgba(200, 200, 200, 0.99);
 	right: -17vw;
+	z-index: 1;
 }
 
 .plus__wrapper.open {
