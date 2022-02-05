@@ -111,6 +111,7 @@ ul {
 .themes_icons h1 {
 	font-size: 2.4vh;
 	border-radius: 1vh;
+	user-select: none;
 }
 
 .white-theme_icon,
@@ -198,6 +199,7 @@ ul {
 	padding-left: 1vw;
 	padding-right: 1vw;
 	margin-left: auto;
+	user-select: none;
 }
 
 .save_toolbar {
@@ -260,7 +262,7 @@ ul {
 	cursor: pointer;
 	margin-top: -0.5vh;
 	margin-bottom: -0.5vh;
-	background-color: rgba(180, 180, 180, 1);
+	background-color: rgba(180, 180, 180, 1)
 }
 
 /* -------------------------------------------------------------- */
@@ -328,6 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	border-radius: 1vh;
 	width: fit-content;
 	cursor: pointer;
+	user-select: none;
 }
 
 .plus__wrapper_random {
