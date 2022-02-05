@@ -42,3 +42,16 @@ saves.forEach(save => {
 		save.classList.toggle("active")
 	})
 })
+
+window.addEventListener("click", (e) => {
+	const targetMenu = e.target.closest(".menu")
+
+	if (!e.target.classList.contains("opener") &&
+		!targetMenu) {
+		menus.forEach(m => {
+			if (m.classList.contains("open")) {
+				m.classList.remove("open")
+			}
+		})
+	}
+})

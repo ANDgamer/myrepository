@@ -24,6 +24,7 @@ body {
 body {
 	background-image: url("images/main_background.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 ul {
@@ -142,12 +143,12 @@ ul {
 	padding-right: 2.5vw;
 }
 
-.saves__head{
+.saves__head {
 	width: 100%;
 	display: flex;
 }
 
-.saves__head i{
+.saves__head i {
 	font-size: 2.6vh;
 	position: fixed;
 	cursor: pointer;
@@ -280,42 +281,43 @@ ul {
 	transform: translateX(-60vw);
 }
 
-.plus__wrapper_manual{
+.plus__wrapper_manual {
 	width: 55vw;
 	padding-left: 2.5vw;
 	padding-right: 2.5vw;
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
-.plus__wrapper h1{
+.plus__wrapper h1 {
 	width: 100%;
 	text-align: center;
 	font-size: 2.8vh;
 }
 
-.choose-jump{
+.choose-jump {
 	display: flex;
 	align-items: center;
 }
 
-.plus__wrapper h2{
+.plus__wrapper h2 {
 	font-size: 2.4vh;
 }
 
-.plus__wrapper_checkbox, .plus__wrapper_number{
+.plus__wrapper_checkbox,
+.plus__wrapper_number {
 	width: 2.8vh;
 	height: 2.8vh;
 	margin-left: auto;
 	text-align: center;
 }
 
-input[type="number"]::-webkit-outer-spin-button, 
-input[type="number"]::-webkit-inner-spin-button { 
-    -webkit-appearance: none; 
- 	margin: 0; 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
-.plus__wrapper h3{
+.plus__wrapper h3 {
 	font-size: 2.4vh;
 	text-align: center;
 	color: rgb(0, 0, 0);
@@ -328,7 +330,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	cursor: pointer;
 }
 
-.plus__wrapper_random{
+.plus__wrapper_random {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	width: 100%;
 	text-align: center;
@@ -339,7 +341,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	padding-right: 2.5vw;
 }
 
-.plus__wrapper_random>div{
+.plus__wrapper_random>div {
 	display: flex;
 	align-items: center;
 }
@@ -364,9 +366,9 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /*-------------------------------------------- body -----------------------------------------------*/
 
-.elements__item_blur{
+.elements__item_blur {
 	position: absolute;
-	backdrop-filter: blur( 5px );
+	backdrop-filter: blur(5px);
 	z-index: -1;
 	border-radius: 2px;
 	width: 100%;
@@ -378,13 +380,13 @@ input[type="number"]::-webkit-inner-spin-button {
 	height: 92vh;
 }
 
-.elements__head{
+.elements__head {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.elements__head i{
+.elements__head i {
 	font-size: 3.5vh;
 	cursor: pointer;
 	background-color: rgba(255, 255, 255, 0.5);
