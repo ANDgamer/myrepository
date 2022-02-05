@@ -22,7 +22,7 @@ body {
 }
 
 body {
-	background-image: url("images/main_background.jpg");
+	background-image: url("images/6288899.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -411,6 +411,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	text-align: center;
 	margin-right: 3vh;
 	margin-left: 3vh;
+	color: rgb(220, 229, 220);
 }
 
 .elements__list {
