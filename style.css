@@ -201,8 +201,12 @@ ul {
 	padding-right: 1vw;
 	margin-left: auto;
 	user-select: none;
-	box-shadow: 0 0 0.4vh rgba(0,0,0,0.3);
+	box-shadow: 0.2vh 0.2vh 0.4vh rgba(0,0,0,0.3);
 	margin-right: 0.5vh;
+}
+
+.save_main-body h2{
+	box-shadow: 0.1vh 0.1vh 0.4vh rgba(0,0,0,0.4) !important;
 }
 
 .save_toolbar {
