@@ -534,3 +534,12 @@ button.button__test {
 button.button__test:active {
 	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
+
+.draggable-source--is-dragging {
+	visibility: none;
+	opacity: 0;
+}
+
+.draggable-mirror {
+	width: 88vw;
+}

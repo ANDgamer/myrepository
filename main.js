@@ -55,3 +55,25 @@ window.addEventListener("click", (e) => {
 		})
 	}
 })
+
+// Initialize sort
+
+const sortableOptions = {
+	draggable: 'li',
+	delay: {
+		mouse: 300,
+		drag: 0,
+		touch: 300
+	},
+	plugins: [SortAnimation.default],
+	sortAnimation: {
+		duration: 200,
+		easingFunction: 'linear',
+	},
+	classes: {
+		'source:dragging': ["draggable-source--is-dragging", 'active'],
+		'source:placed': ["draggable-source--placed", 'active']
+	}
+}
+
+let sortable = new Sortable.default(document.querySelector('ul.elements__list'), sortableOptions)
