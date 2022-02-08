@@ -2,7 +2,7 @@ const openersMenu = document.querySelectorAll(".opener")
 const menus = document.querySelectorAll(".menu")
 
 const deleteAllBtn = document.getElementById("delete-all")
-const deleteBtns = document.querySelectorAll(".delete-btn")
+let deleteBtns = document.querySelectorAll(".delete-btn")
 
 const elementsList = document.querySelector(".elements__list")
 
@@ -78,13 +78,16 @@ const clearList = list => list.innerHTML = ''
 deleteAllBtn.addEventListener("click", () => clearList(elementsList))
 
 // Delete item
-
-deleteBtns.forEach(btn => {
-	btn.addEventListener("click", () => {
-		const item = btn.closest(".elements__item")
-		item.remove()
+const deleteItem = () => {
+	deleteBtns = document.querySelectorAll(".delete-btn")
+	deleteBtns.forEach(btn => {
+		btn.addEventListener("click", () => {
+			const item = btn.closest(".elements__item")
+			item.remove()
+		})
 	})
-})
+}
+deleteItem()
 
 
 // Fill elems
@@ -114,4 +117,5 @@ addElemBtn.addEventListener("click", () => {
 			<button class="far fa-trash-alt delete-btn" title="Delete"></button>
 		</div>
 	</li>`
+	deleteItem()
 })
