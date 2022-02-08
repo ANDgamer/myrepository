@@ -544,3 +544,19 @@ button.button__test:active {
 .draggable-mirror {
 	width: 88vw;
 }
+
+.sortable-chosen {
+	/* background-color: green; */
+	/* opacity: 0; */
+}
+
+.sortable-ghost {
+	/* background-color: blue; */
+	opacity: 0;
+}
+
+
+
+.sortable-drag {
+	opacity: 1;
+}
