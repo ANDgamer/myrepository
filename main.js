@@ -1,6 +1,14 @@
 const openersMenu = document.querySelectorAll(".opener")
 const menus = document.querySelectorAll(".menu")
 
+const deleteAllBtn = document.getElementById("delete-all")
+const deleteBtns = document.querySelectorAll(".delete-btn")
+
+const elementsList = document.querySelector(".elements__list")
+
+const saves = document.querySelectorAll(".save")
+
+
 // Menus toogle show
 openersMenu.forEach((btn, n) => {
 	btn.addEventListener("click", () => {
@@ -18,7 +26,6 @@ openersMenu.forEach((btn, n) => {
 
 
 // Saves activation
-const saves = document.querySelectorAll(".save")
 
 saves.forEach(save => {
 	save.addEventListener("click", (e) => {
@@ -56,32 +63,24 @@ window.addEventListener("click", (e) => {
 	}
 })
 
-// Initialize sort
-
-// const sortableOptions = {
-// 	draggable: 'li',
-// 	delay: {
-// 		mouse: 300,
-// 		drag: 0,
-// 		touch: 300
-// 	},
-// 	plugins: [SortAnimation.default],
-// 	sortAnimation: {
-// 		duration: 200,
-// 		easingFunction: 'linear',
-// 	},
-// 	classes: {
-// 		'source:dragging': ["draggable-source--is-dragging", 'active'],
-// 		'source:placed': ["draggable-source--placed", 'active']
-// 	}
-// }
-
-// let sortable = new Sortable.default(document.querySelector('ul.elements__list'), sortableOptions)
-
+// Initialize sortable
 let elements = document.querySelector('ul.elements__list')
-
 let sortable = new Sortable(elements, {
 	animation: 300,
-	// handle: '.far',
 	delay: 200
+})
+
+
+// Delete all
+const clearList = list => list.innerHTML = ''
+
+deleteAllBtn.addEventListener("click", () => clearList(elementsList))
+
+// Delete item
+
+deleteBtns.forEach(btn => {
+	btn.addEventListener("click", () => {
+		const item = btn.closest(".elements__item")
+		item.remove()
+	})
 })
