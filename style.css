@@ -528,7 +528,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 button.button__test {
 	margin-top: 15px;
-	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh 0px;
 }
 
 button.button__test:active {
