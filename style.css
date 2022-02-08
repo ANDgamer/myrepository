@@ -37,7 +37,7 @@ ul {
 	top: 0;
 	width: 100vw;
 	height: 7vh;
-	background-color: rgba(200, 200,200, 0.99);
+	background-color: rgba(200, 200, 200, 0.99);
 	display: flex;
 	color: black;
 }
@@ -61,7 +61,7 @@ ul {
 	font-size: 5vh;
 	margin: 1vh;
 	cursor: pointer;
-	text-shadow: rgba(0,0,0,0.4) 0.3vh 0.3vh 0.6vh
+	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh
 }
 
 /*------------------------------------------ wrappers -----------------------------------------------*/
@@ -69,7 +69,7 @@ ul {
 .menu__wrapper {
 	position: relative;
 	width: 60vw;
-	background-color: rgba(200, 200,200, 0.99);
+	background-color: rgba(200, 200, 200, 0.99);
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: 93vh;
@@ -170,7 +170,7 @@ ul {
 	margin-top: 0.6vh;
 	transition: background-color .2s;
 	border-radius: 5px;
-	box-shadow: 0.2vh 0.2vh 0.7vh rgba(0,0,0,0.4);
+	box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.4);
 }
 
 .save.active {
@@ -204,12 +204,12 @@ ul {
 	padding-right: 1vw;
 	margin-left: auto;
 	user-select: none;
-	box-shadow: 0.2vh 0.2vh 0.4vh rgba(0,0,0,0.3);
+	box-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.3);
 	margin-right: 0.5vh;
 }
 
-.save_main-body h2{
-	box-shadow: 0.1vh 0.1vh 0.4vh rgba(0,0,0,0.4) !important;
+.save_main-body h2 {
+	box-shadow: 0.1vh 0.1vh 0.4vh rgba(0, 0, 0, 0.4) !important;
 }
 
 .save_toolbar {
@@ -340,7 +340,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: fit-content;
 	cursor: pointer;
 	user-select: none;
-	box-shadow: rgba(0,0,0,0.3) 0.3vh 0.3vh 0.6vh;
+	box-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
 }
 
 .plus__wrapper_random {
@@ -412,7 +412,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	background-color: rgba(255, 255, 255, 0.7);
 	border-radius: 1vh;
 	padding: 1vh;
-	text-shadow: rgba(0,0,0,0.4) 0.3vh 0.3vh 0.6vh
+	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh
 }
 
 .elements__title {
@@ -462,7 +462,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin-left: 2vw;
 	margin-right: 2vw;
 	cursor: pointer;
-	text-shadow: rgba(0,0,0,0.4) 0.1vh 0.1vh 0.2vh
+	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh
 }
 
 .elements__item-buttons {
@@ -474,4 +474,15 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements__item-buttons i {
 	font-size: 2.3vh;
+}
+
+
+
+.button__test {
+	margin-top: 15px;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh -1px;
+}
+
+.button__test:active {
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
