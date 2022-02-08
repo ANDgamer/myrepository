@@ -8,6 +8,8 @@ const elementsList = document.querySelector(".elements__list")
 
 const saves = document.querySelectorAll(".save")
 
+let elems = []
+
 
 // Menus toogle show
 openersMenu.forEach((btn, n) => {
@@ -64,8 +66,7 @@ window.addEventListener("click", (e) => {
 })
 
 // Initialize sortable
-let elements = document.querySelector('ul.elements__list')
-let sortable = new Sortable(elements, {
+let sortable = new Sortable(elementsList, {
 	animation: 300,
 	delay: 200
 })
@@ -83,4 +84,34 @@ deleteBtns.forEach(btn => {
 		const item = btn.closest(".elements__item")
 		item.remove()
 	})
+})
+
+
+// Fill elems
+for (let i = 0; i < elementsList.children.length; i++) {
+	const children = elementsList.children[i];
+	const elem = children.textContent.trim()
+	elems.push(elem)
+}
+
+const random = arr => {
+	return arr[Math.floor(Math.random() * arr.length)]
+}
+for (let i = 0; i < elementsList.children.length; i++) {
+	console.log(random(elems))
+}
+
+const addElemBtn = document.getElementById("add-elem")
+
+addElemBtn.addEventListener("click", () => {
+	elementsList.innerHTML += `		
+	<li class="elements__item">
+		<div class="elements__item_blur"></div>
+		<i class="fas fa-circle"></i>
+		<p>${random(elems)}</p>
+		<div class="elements__item-buttons">
+			<button class="fas fa-random" title="Change"></button>
+			<button class="far fa-trash-alt delete-btn" title="Delete"></button>
+		</div>
+	</li>`
 })
