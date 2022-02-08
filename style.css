@@ -61,7 +61,6 @@ ul {
 	font-size: 5vh;
 	margin: 1vh;
 	cursor: pointer;
-	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh
 }
 
 /*------------------------------------------ wrappers -----------------------------------------------*/
@@ -109,10 +108,19 @@ ul {
 	justify-content: space-evenly;
 }
 
-.themes_icons h1 {
+.themes_icons button {
 	font-size: 2.4vh;
 	border-radius: 1vh;
 	user-select: none;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	font-weight: bold;
+	border: 0;
+}
+
+.themes_icons button:active {
+	transform: scale(0.94);
 }
 
 .white-theme_icon,
@@ -125,13 +133,13 @@ ul {
 	border: 0 !important;
 }
 
-.white-theme_icon h1 {
+.white-theme_icon button {
 	color: rgb(0, 0, 0);
 	background-color: rgba(255, 255, 255, 0.5);
 	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 0.8vh;
 }
 
-.black-theme_icon h1 {
+.black-theme_icon button {
 	color: rgb(255, 255, 255);
 	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 1vh;
@@ -152,11 +160,20 @@ ul {
 	display: flex;
 }
 
-.saves__head i {
-	font-size: 2.6vh;
+.saves__head button {
+	font-size: 3vh;
 	position: fixed;
 	cursor: pointer;
 	margin-left: 1vw;
+	background: none;
+	border: 0;
+	margin-top: 0.8vh;
+	margin-bottom: 0.8vh;
+	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh;
+}
+
+.saves__head button:active {
+	transform: scale(0.92);
 }
 
 .saves h1 {
@@ -194,7 +211,7 @@ ul {
 	font-size: 2.4vh;
 }
 
-.save h2 {
+.save button {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	cursor: pointer;
 	font-size: 2.2vh;
@@ -206,9 +223,15 @@ ul {
 	user-select: none;
 	box-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.3);
 	margin-right: 0.5vh;
+	border: 0;
+	font-weight: bold;
 }
 
-.save_main-body h2 {
+.save button:active {
+	transform: scale(0.92);
+}
+
+.save_main-body button {
 	box-shadow: 0.1vh 0.1vh 0.4vh rgba(0, 0, 0, 0.4) !important;
 }
 
@@ -262,7 +285,7 @@ ul {
 	}
 }
 
-.save_toolbar h2 {
+.save_toolbar button {
 	font-size: 2.2vh;
 	border: 0 !important;
 	border-radius: 5px;
@@ -298,6 +321,7 @@ ul {
 	padding-left: 2.5vw;
 	padding-right: 2.5vw;
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	text-align: center;
 }
 
 .plus__wrapper h1 {
@@ -329,7 +353,8 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-.plus__wrapper h3 {
+.plus__wrapper button {
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.4vh;
 	text-align: center;
 	background-color: rgb(220, 220, 220);
@@ -341,6 +366,12 @@ input[type="number"]::-webkit-inner-spin-button {
 	cursor: pointer;
 	user-select: none;
 	box-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
+	border: 0;
+	font-weight: bold;
+}
+
+.plus__wrapper button:active {
+	transform: scale(0.94);
 }
 
 .plus__wrapper_random {
@@ -406,13 +437,19 @@ input[type="number"]::-webkit-inner-spin-button {
 	align-items: center;
 }
 
-.elements__head i {
+.elements__head button {
 	font-size: 3.5vh;
 	cursor: pointer;
-	background-color: rgba(255, 255, 255, 0.7);
+	background-color: rgb(180, 180, 180);
 	border-radius: 1vh;
 	padding: 1vh;
-	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh
+	box-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh;
+	border: 0;
+	text-shadow: rgb(0 0 0 / 40%) 0.3vh 0.3vh 0.6vh;
+}
+
+.elements__head button:active {
+	transform: scale(0.94);
 }
 
 .elements__title {
@@ -462,7 +499,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin-left: 2vw;
 	margin-right: 2vw;
 	cursor: pointer;
-	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh
+	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh;
 }
 
 .elements__item-buttons {
@@ -472,17 +509,28 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin-left: auto;
 }
 
-.elements__item-buttons i {
+.elements__item-buttons button:nth-child(1) {
+	margin-right: 4vw !important;
+}
+
+.elements__item-buttons button {
 	font-size: 2.3vh;
+	border: none;
+	background: none;
+	margin-right: 2vw;
+	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh;
+	cursor: pointer;
 }
 
+.elements__item-buttons button:active {
+	transform: scale(0.92);
+}
 
-
-.button__test {
+button.button__test {
 	margin-top: 15px;
-	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh -1px;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh;
 }
 
-.button__test:active {
+button.button__test:active {
 	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }

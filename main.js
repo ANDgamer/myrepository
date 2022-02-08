@@ -23,7 +23,7 @@ const saves = document.querySelectorAll(".save")
 saves.forEach(save => {
 	save.addEventListener("click", (e) => {
 
-		if (e.target.tagName === "H2") return
+		if (e.target.tagName === "BUTTON") return
 
 		saves.forEach(i => {
 			if (i.classList.contains("active") &&
