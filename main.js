@@ -4,6 +4,9 @@ const menus = document.querySelectorAll(".menu")
 const deleteAllBtn = document.getElementById("delete-all")
 let deleteBtns = document.querySelectorAll(".delete-btn")
 
+const addElemBtn = document.getElementById("add-elem")
+
+
 const elementsList = document.querySelector(".elements__list")
 
 const saves = document.querySelectorAll(".save")
@@ -13,15 +16,16 @@ let elems = []
 
 // Menus toogle show
 openersMenu.forEach((btn, n) => {
-	btn.addEventListener("click", () => {
-		let menu = btn.parentNode.querySelector(".menu")
 
+	btn.addEventListener("click", () => {
+		let menuSelector = btn.getAttribute("data-menu")
+		console.log(menuSelector)
+		let menu = document.querySelector("." + menuSelector)
 		menus.forEach(nMenu => {
 			if (nMenu.classList.contains("open") && nMenu !== menu) {
 				nMenu.classList.remove("open")
 			}
 		})
-
 		menu.classList.toggle("open")
 	})
 })
@@ -100,11 +104,7 @@ for (let i = 0; i < elementsList.children.length; i++) {
 const random = arr => {
 	return arr[Math.floor(Math.random() * arr.length)]
 }
-for (let i = 0; i < elementsList.children.length; i++) {
-	console.log(random(elems))
-}
 
-const addElemBtn = document.getElementById("add-elem")
 
 addElemBtn.addEventListener("click", () => {
 	elementsList.innerHTML += `		

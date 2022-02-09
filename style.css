@@ -66,7 +66,8 @@ ul {
 /*------------------------------------------ wrappers -----------------------------------------------*/
 
 .menu__wrapper {
-	position: relative;
+	position: absolute;
+	top: 7vh;
 	width: 60vw;
 	background-color: rgba(200, 200, 200, 0.99);
 	transform: translateX(0vw);
@@ -301,15 +302,16 @@ ul {
 /* -------------------------------------------------------------- */
 
 .plus__wrapper {
-	position: relative;
-	width: 60vw;
-	background-color: white;
-	transform: translateX(0vw);
-	transition: transform .3s;
-	height: 93vh;
-	background-color: rgba(200, 200, 200, 0.99);
-	right: -17vw;
-	z-index: 1;
+	position: fixed;
+    top: 7vh;
+    width: 60vw;
+    background-color: white;
+    transform: translateX(0vw);
+    transition: transform .3s;
+    height: 93vh;
+    background-color: rgba(200, 200, 200, 0.99);
+    right: -60vw;
+    z-index: 1;
 }
 
 .plus__wrapper.open {
@@ -545,18 +547,17 @@ button.button__test:active {
 	width: 88vw;
 }
 
-.sortable-chosen {
-	/* background-color: green; */
-	/* opacity: 0; */
-}
-
 .sortable-ghost {
-	/* background-color: blue; */
 	opacity: 0;
 }
 
-
+.sortable-chosen {}
 
 .sortable-drag {
 	opacity: 1;
+}
+
+.elements__item_blur {
+	display: none;
+	visibility: none;
 }
