@@ -223,18 +223,14 @@ ul {
 	padding-right: 1vw;
 	margin-left: auto;
 	user-select: none;
-	box-shadow: 0.2vh 0.2vh 0.4vh rgba(0, 0, 0, 0.3);
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 	margin-right: 0.5vh;
 	border: 0;
 	font-weight: bold;
 }
 
 .save button:active {
-	transform: scale(0.92);
-}
-
-.save_main-body button {
-	box-shadow: 0.1vh 0.1vh 0.4vh rgba(0, 0, 0, 0.4) !important;
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
 .save_toolbar {
@@ -463,7 +459,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	text-align: center;
 	margin-right: 3vh;
 	margin-left: 3vh;
-	color: rgb(220, 229, 220);
+	color: rgb(220, 220, 220);
 }
 
 .elements__list {
