@@ -118,10 +118,11 @@ ul {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-weight: bold;
 	border: 0;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 }
 
 .themes_icons button:active {
-	transform: scale(0.94);
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
 .white-theme_icon,
@@ -367,13 +368,14 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: fit-content;
 	cursor: pointer;
 	user-select: none;
-	box-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
 	border: 0;
 	font-weight: bold;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 }
 
 .plus__wrapper button:active {
 	transform: scale(0.94);
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
 .plus__wrapper_random {
@@ -530,7 +532,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 button.button__test {
 	margin-top: 15px;
-	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgb(255 255 255) 0.3vh 0.3vh 0.6vh 0px;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 }
 
 button.button__test:active {
