@@ -16,9 +16,9 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
-	overflow: hidden;
+	
 }
 
 body {
@@ -428,7 +428,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements {
 	width: 100vw;
-	height: 92vh;
+	min-height: 92vh;
 }
 
 .elements__head {
@@ -467,6 +467,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	height: 85%;
 	margin-left: 6vw;
 	margin-right: 6vw;
+	margin-bottom: 6vw;
 	font-size: 2.5vh;
 	color: black;
 }
