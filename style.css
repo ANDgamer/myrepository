@@ -553,8 +553,6 @@ button.button__test:active {
 	opacity: 0;
 }
 
-.sortable-chosen {}
-
 .sortable-drag {
 	opacity: 1;
 }
