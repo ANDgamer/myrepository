@@ -1,3 +1,13 @@
+/* 
+content:
+1. html
+2. header
+3. wrappers
+	1) themes
+	2) saves
+4. body
+*/
+
 /*-------------------------------------------- html -----------------------------------------------*/
 
 *,
@@ -205,6 +215,7 @@ ul {
 	justify-content: left;
 	align-items: center;
 	cursor: pointer;
+	padding-left: 0.5vh;
 }
 
 .save i {
@@ -223,12 +234,11 @@ ul {
 	border-radius: 5px;
 	padding-left: 1vw;
 	padding-right: 1vw;
-	margin-left: auto;
 	user-select: none;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
-	margin-right: 0.5vh;
 	border: 0;
 	font-weight: bold;
+	margin-right: 1vh;
 }
 
 .save button:active {
@@ -311,6 +321,7 @@ ul {
     background-color: rgba(200, 200, 200, 0.99);
     right: -60vw;
     z-index: 1;
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 .plus__wrapper.open {
@@ -321,7 +332,6 @@ ul {
 	width: 55vw;
 	padding-left: 2.5vw;
 	padding-right: 2.5vw;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	text-align: center;
 }
 
