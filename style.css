@@ -3,8 +3,9 @@ content:
 1. html
 2. header
 3. wrappers
-	1) themes
-	2) saves
+	1) actions
+	2) themes
+	3) saves
 4. body
 */
 
@@ -26,8 +27,9 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	min-height: 93vh;
+	height: 100vh;
 	width: 100%;
+	overflow: hidden
 	
 }
 
@@ -50,29 +52,17 @@ ul {
 	background-color: rgba(200, 200, 200, 0.99);
 	display: flex;
 	color: black;
-	position: fixed;
 	z-index: 1;
-}
-
-.menu_icon,
-.save_icon,
-.plus_icon {
-	height: 100%;
-	width: 20%;
-}
-
-.menu_icon {
-	width: 15% !important;
-}
-
-.plus_icon {
-	width: 17% !important;
 }
 
 .header i {
 	font-size: 5vh;
 	margin: 1vh;
 	cursor: pointer;
+}
+
+.header i:active{
+	transform: scale(0.95);
 }
 
 /*------------------------------------------ wrappers -----------------------------------------------*/
@@ -93,7 +83,38 @@ ul {
 	transform: translateX(60vw);
 }
 
+/*------------------------------------------ actions -----------------------------------------------*/
+
+.actions_buttons{
+	display: flex;
+	align-items: center;
+}
+
+.actions_buttons i{
+	font-size: 4vh;
+}
+
 /*------------------------------------------ themes -----------------------------------------------*/
+
+.additionals{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1vh 0 0.5vh 0 ;
+}
+
+.additionals button{
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+}
+
+.additionals button:active{
+	transform: scale(0.92);
+}
+
+.additionals i{
+	font-size: 4vh;
+	text-shadow: rgba(0, 0, 0, 0.2) 0.3vh 0.3vh 0.6vh;
+}
 
 .themes {
 	width: 60vw;
@@ -183,7 +204,7 @@ ul {
 	border: 0;
 	margin-top: 0.8vh;
 	margin-bottom: 0.8vh;
-	text-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh;
+	text-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
 }
 
 .saves__head button:active {
@@ -405,9 +426,7 @@ input[type="number"]::-webkit-inner-spin-button {
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
-	height: 100%;
-	width: 48%;
-	font-size: 1.1vh;
+	margin: 0 auto;
 	text-align: center;
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	display: flex;
@@ -440,8 +459,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements {
 	width: 100%;
-	min-height: 93vh;
-	margin-top: 7vh;
+	height: 93vh;
 }
 
 .elements__head {
