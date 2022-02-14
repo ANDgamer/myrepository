@@ -38,7 +38,7 @@
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 1</h2>
+							<h2 class="save__name">Save 1</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -46,14 +46,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 2</h2>
+							<h2 class="save__name">Save 2</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -61,14 +61,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 3</h2>
+							<h2 class="save__name">Save 3</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -76,14 +76,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 4</h2>
+							<h2 class="save__name">Save 4</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -91,14 +91,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 5</h2>
+							<h2 class="save__name">Save 5</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -106,14 +106,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 6</h2>
+							<h2 class="save__name">Save 6</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -121,14 +121,14 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 					<div class="save item">
 						<div class="save_main-body item__body">
 							<i class="fas fa-save"></i>
-							<h2>Save 7</h2>
+							<h2 class="save__name">Save 7</h2>
 							<button>use</button>
 						</div>
 						<div class="save_toolbar item__toolbar">
@@ -136,13 +136,13 @@
 								<button>Rename</button>
 							</div>
 							<div>
-								<button>Delete</button>
+								<button class="delete-btn">Delete</button>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="saves__button items__button">
-					<button>Delete all</button>
+					<button id="saves-delete-all">Delete all</button>
 				</div>
 			</div>
 		</div>
@@ -163,7 +163,7 @@
 			<img src="images/cc-logo-min.png" alt="Logo">
 		</div>
 		<div class="save_icon">
-			<i class="far fa-save" title="Save"></i>
+			<i class="far fa-save" id="saves-add" title="Save"></i>
 		</div>
 		<div class="plus_icon">
 			<i class="fas fa-plus opener" data-menu="plus__wrapper"></i>
@@ -196,7 +196,7 @@
 				<h2>Повтор ел.</h2>
 				<input class="plus__wrapper_checkbox" type="checkbox">
 			</div>
-			<button class="plus__wrapper-btn" id="add-elem">Add</button>
+			<button class="plus__wrapper-btn" id="elems-add">Add</button>
 		</div>
 		<div class="sketches items">
 			<div class="sketches__head items__head">
@@ -206,7 +206,7 @@
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 1</h2>
+						<h2 class="sketch__name">Sketch 1</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -214,14 +214,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 2</h2>
+						<h2 class="sketch__name">Sketch 2</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -229,14 +229,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 3</h2>
+						<h2 class="sketch__name">Sketch 3</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -244,14 +244,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 4</h2>
+						<h2 class="sketch__name">Sketch 4</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -259,14 +259,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 5</h2>
+						<h2 class="sketch__name">Sketch 5</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -274,14 +274,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 6</h2>
+						<h2 class="sketch__name">Sketch 6</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -289,14 +289,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 				<div class="sketch item">
 					<div class="sketch_main-body item__body">
 						<i class="fas fa-save"></i>
-						<h2>Sketch 7</h2>
+						<h2 class="sketch__name">Sketch 7</h2>
 						<button>use</button>
 					</div>
 					<div class="sketch_toolbar item__toolbar">
@@ -304,14 +304,14 @@
 							<button>Rename</button>
 						</div>
 						<div>
-							<button>Delete</button>
+							<button class="delete-btn">Delete</button>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="sketches__buttons items__button">
-				<button>Add</button>
-				<butto>Delete all</butto>
+				<button id="sketches-add">Add</button>
+				<button id="sketches-delete-all">Delete all</button>
 			</div>
 		</div>
 	</div>
@@ -320,13 +320,13 @@
 		<div class="elements__head">
 			<button class="fas fa-random" title="Change all"></button>
 			<h1 class="elements__title">Elements</h1>
-			<button class="far fa-trash-alt" id="delete-all" title="Delete all"></button>
+			<button class="far fa-trash-alt" id="elems-delete-all" title="Delete all"></button>
 		</div>
 		<ul class="elements__list">
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Скльопка схресним</p>
+				<p class="elements__name">Скльопка схресним</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -335,7 +335,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>360 з кістей</p>
+				<p class="elements__name">360 з кістей</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -344,7 +344,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Перельот кутом верхнім</p>
+				<p class="elements__name">Перельот кутом верхнім</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -353,7 +353,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Олі з скльопки</p>
+				<p class="elements__name">Олі з скльопки</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -362,7 +362,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Мега олі</p>
+				<p class="elements__name">Мега олі</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -371,7 +371,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Гейнер в сід</p>
+				<p class="elements__name">Гейнер в сід</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -380,7 +380,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Х-виліт на 360</p>
+				<p class="elements__name">Х-виліт на 360</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -389,7 +389,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Сонечко в луну</p>
+				<p class="elements__name">Сонечко в луну</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>
@@ -398,7 +398,7 @@
 			<li class="elements__item">
 				<div class="elements__item_blur"></div>
 				<i class="fas fa-circle"></i>
-				<p>Гробік на 540</p>
+				<p class="elements__name">Гробік на 540</p>
 				<div class="elements__item-buttons">
 					<button class="fas fa-random" title="Change"></button>
 					<button class="far fa-trash-alt delete-btn" title="Delete"></button>

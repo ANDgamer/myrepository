@@ -1,29 +1,94 @@
+// FOR ANDREY - start
+
+// Максимальна кількість елементів
+const maxElems = 20
+
+// Максимальна кількість сейвів
+const maxSaves = 20
+
+// Максимальна кількість темплейтів(по твому ескізи, хоча до чого тут вони, ескізи це ж про художнє мистецтво)))
+const maxSketch = 20
+
+
+// FOR ANDREY - end
+
+
+
+
 const openersMenu = document.querySelectorAll(".opener")
 const menus = document.querySelectorAll(".menu")
 
-const deleteAllBtn = document.getElementById("delete-all")
-let deleteBtns = document.querySelectorAll(".delete-btn")
 
-const addElemBtn = document.getElementById("add-elem")
+const elemsList = document.querySelector(".elements__list")
+const savesList = document.querySelector(".saves__body")
+const sketchesList = document.querySelector(".sketches__body")
 
-const elementsList = document.querySelector(".elements__list")
+const elemsDeleteAllBtn = document.getElementById("elems-delete-all")
+const savesDeleteAllBtn = document.getElementById("saves-delete-all")
+const sketchesDeleteAllBtn = document.getElementById("sketches-delete-all")
 
-const saves = document.querySelectorAll(".save")
-const sketches = document.querySelectorAll(".sketch")
+let elemsDeleteBtns = elemsList.querySelectorAll(".delete-btn")
+let savesDeleteBtns = savesList.querySelectorAll(".delete-btn")
+let sketchesDeleteBtns = sketchesList.querySelectorAll(".delete-btn")
+
+const elemsAddBtn = document.getElementById("elems-add")
+const savesAddBtn = document.getElementById("saves-add")
+const sketchesAddBtn = document.getElementById("sketches-add")
+
+const elemItemHTML = `
+	<li class="elements__item">
+		<div class="elements__item_blur"></div>
+		<i class="fas fa-circle"></i>
+		<p class="elements__name"></p>
+		<div class="elements__item-buttons">
+			<button class="fas fa-random" title="Change"></button>
+			<button class="far fa-trash-alt delete-btn" title="Delete"></button>
+		</div>
+	</li>`
+const saveItemHTML = `
+	<div class="save item">
+		<div class="save_main-body item__body">
+			<i class="fas fa-save"></i>
+			<h2 class="save__name">Save </h2>
+			<button>use</button>
+		</div>
+		<div class="save_toolbar item__toolbar">
+			<div>
+				<button>Rename</button>
+			</div>
+			<div>
+				<button class="delete-btn">Delete</button>
+			</div>
+		</div>
+	</div>`
+const sketchItemHTML = `
+	<div class="sketch item">
+		<div class="sketch_main-body item__body">
+			<i class="fas fa-save"></i>
+			<h2 class="sketch__name">Sketch </h2>
+			<button>use</button>
+		</div>
+		<div class="sketch_toolbar item__toolbar">
+			<div>
+				<button>Rename</button>
+			</div>
+			<div>
+				<button class="delete-btn">Delete</button>
+			</div>
+		</div>
+	</div>`
 
 let elems = []
 
-let sortable = new Sortable(elementsList, {
+let sortable = new Sortable(elemsList, {
 	animation: 300,
 	delay: 200
 })
 
-
-
 const random = arr => arr[Math.floor(Math.random() * arr.length)]
 
-for (let i = 0; i < elementsList.children.length; i++) {
-	const children = elementsList.children[i];
+for (let i = 0; i < elemsList.children.length; i++) {
+	const children = elemsList.children[i];
 	const elem = children.textContent.trim()
 	elems.push(elem)
 }
@@ -47,7 +112,7 @@ const addAnimation = (items, duration, selector) => {
 			if (e.target.tagName === "BUTTON") return
 
 			items.forEach(i => {
-				if (i.classList.contains(selector) &&
+				if (i.tagName && i.classList.contains(selector) &&
 					i !== item) {
 					i.classList.remove(selector)
 				}
@@ -79,38 +144,51 @@ const detectCloseMenu = (e) => {
 
 const clearList = list => list.innerHTML = ''
 
-const initDeleteEvent = () => {
-	deleteBtns = document.querySelectorAll(".delete-btn")
-	deleteBtns.forEach(btn => {
+const initDeleteEvent = (btns, list, itemSelector) => {
+	console.log(btns, list)
+	btns.forEach(btn => {
 		btn.addEventListener("click", () => {
-			const item = btn.closest(".elements__item")
-			item.remove()
+			const item = btn.closest(itemSelector)
+			setTimeout(() => {
+				item.remove()
+			}, 0);
 		})
 	})
 }
 
-const addElem = () => {
-	elementsList.innerHTML += `		
-	<li class="elements__item">
-		<div class="elements__item_blur"></div>
-		<i class="fas fa-circle"></i>
-		<p>${random(elems)}</p>
-		<div class="elements__item-buttons">
-			<button class="fas fa-random" title="Change"></button>
-			<button class="far fa-trash-alt delete-btn" title="Delete"></button>
-		</div>
-	</li>`
-	initDeleteEvent()
+const initDeleteAllEvent = (btn, list) => {
+	btn.addEventListener("click", () => clearList(list))
+}
+
+const initAddEvent = (btn, list, itemHTML, nameSelector, name) => {
+	btn.addEventListener("click", () => {
+
+		list.innerHTML += itemHTML
+		const itemName = list.lastChild.querySelector(nameSelector)
+		itemName.textContent += name()
+		const deleteBtns = list.querySelectorAll(".delete-btn")
+		// initDeleteEvent(deleteBtns, list, itemSelector)
+	});
 }
 
 
 
-openersMenu.forEach(initOpenMenu)
 
-addAnimation(saves, 200, "active")
-addAnimation(sketches, 200, "active")
-initDeleteEvent()
+openersMenu.forEach(initOpenMenu);
 
-addElemBtn.addEventListener("click", addElem)
-deleteAllBtn.addEventListener("click", () => clearList(elementsList))
+addAnimation(savesList.childNodes, 200, "active");
+addAnimation(sketchesList.childNodes, 200, "active");
+
+initDeleteAllEvent(elemsDeleteAllBtn, elemsList);
+initDeleteAllEvent(savesDeleteAllBtn, savesList);
+initDeleteAllEvent(sketchesDeleteAllBtn, sketchesList);
+
+initDeleteEvent(elemsDeleteBtns, elemsList, ".elements__item");
+initDeleteEvent(savesDeleteBtns, savesList, ".save");
+initDeleteEvent(sketchesDeleteBtns, sketchesList, ".sketch");
+
+initAddEvent(elemsAddBtn, elemsList, elemItemHTML, ".elements__name", () => random(elems))
+initAddEvent(savesAddBtn, savesList, saveItemHTML, ".save__name", () => savesList.childElementCount)
+initAddEvent(sketchesAddBtn, sketchesList, sketchItemHTML, ".sketch__name", () => sketchesList.childElementCount)
+
 window.addEventListener("click", detectCloseMenu)
