@@ -6,20 +6,31 @@ let deleteBtns = document.querySelectorAll(".delete-btn")
 
 const addElemBtn = document.getElementById("add-elem")
 
-
 const elementsList = document.querySelector(".elements__list")
 
 const saves = document.querySelectorAll(".save")
+const sketches = document.querySelectorAll(".sketch")
 
 let elems = []
 
+let sortable = new Sortable(elementsList, {
+	animation: 300,
+	delay: 200
+})
 
-// Menus toogle show
-openersMenu.forEach((btn, n) => {
 
+
+const random = arr => arr[Math.floor(Math.random() * arr.length)]
+
+for (let i = 0; i < elementsList.children.length; i++) {
+	const children = elementsList.children[i];
+	const elem = children.textContent.trim()
+	elems.push(elem)
+}
+
+const initOpenMenu = (btn) => {
 	btn.addEventListener("click", () => {
 		let menuSelector = btn.getAttribute("data-menu")
-		console.log(menuSelector)
 		let menu = document.querySelector("." + menuSelector)
 		menus.forEach(nMenu => {
 			if (nMenu.classList.contains("open") && nMenu !== menu) {
@@ -28,61 +39,47 @@ openersMenu.forEach((btn, n) => {
 		})
 		menu.classList.toggle("open")
 	})
-})
+}
 
+const addAnimation = (items, duration, selector) => {
+	items.forEach(item => {
+		item.addEventListener("click", (e) => {
+			if (e.target.tagName === "BUTTON") return
 
-// Saves activation
+			items.forEach(i => {
+				if (i.classList.contains(selector) &&
+					i !== item) {
+					i.classList.remove(selector)
+				}
+			})
 
-saves.forEach(save => {
-	save.addEventListener("click", (e) => {
-
-		if (e.target.tagName === "BUTTON") return
-
-		saves.forEach(i => {
-			if (i.classList.contains("active") &&
-				i !== save) {
-				i.classList.remove("active")
+			if (item.classList.contains(selector)) {
+				item.classList.remove(selector)
+				item.classList.add("dis" + selector)
+				setTimeout(() => {
+					item.classList.remove("dis" + selector)
+				}, duration)
+				return
 			}
+			item.classList.toggle(selector)
 		})
-		if (save.classList.contains("active")) {
-			save.classList.remove("active")
-			save.classList.add("disactive")
-			setTimeout(() => {
-				save.classList.remove("disactive")
-			}, 200)
-			return
-		}
-		save.classList.toggle("active")
 	})
-})
+}
 
-window.addEventListener("click", (e) => {
+const detectCloseMenu = (e) => {
 	const targetMenu = e.target.closest(".menu")
-
-	if (!e.target.classList.contains("opener") &&
-		!targetMenu) {
+	if (!e.target.classList.contains("opener") && !targetMenu) {
 		menus.forEach(m => {
 			if (m.classList.contains("open")) {
 				m.classList.remove("open")
 			}
 		})
 	}
-})
+}
 
-// Initialize sortable
-let sortable = new Sortable(elementsList, {
-	animation: 300,
-	delay: 200
-})
-
-
-// Delete all
 const clearList = list => list.innerHTML = ''
 
-deleteAllBtn.addEventListener("click", () => clearList(elementsList))
-
-// Delete item
-const deleteItem = () => {
+const initDeleteEvent = () => {
 	deleteBtns = document.querySelectorAll(".delete-btn")
 	deleteBtns.forEach(btn => {
 		btn.addEventListener("click", () => {
@@ -91,22 +88,8 @@ const deleteItem = () => {
 		})
 	})
 }
-deleteItem()
 
-
-// Fill elems
-for (let i = 0; i < elementsList.children.length; i++) {
-	const children = elementsList.children[i];
-	const elem = children.textContent.trim()
-	elems.push(elem)
-}
-
-const random = arr => {
-	return arr[Math.floor(Math.random() * arr.length)]
-}
-
-
-addElemBtn.addEventListener("click", () => {
+const addElem = () => {
 	elementsList.innerHTML += `		
 	<li class="elements__item">
 		<div class="elements__item_blur"></div>
@@ -117,5 +100,17 @@ addElemBtn.addEventListener("click", () => {
 			<button class="far fa-trash-alt delete-btn" title="Delete"></button>
 		</div>
 	</li>`
-	deleteItem()
-})
+	initDeleteEvent()
+}
+
+
+
+openersMenu.forEach(initOpenMenu)
+
+addAnimation(saves, 200, "active")
+addAnimation(sketches, 200, "active")
+initDeleteEvent()
+
+addElemBtn.addEventListener("click", addElem)
+deleteAllBtn.addEventListener("click", () => clearList(elementsList))
+window.addEventListener("click", detectCloseMenu)

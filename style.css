@@ -32,10 +32,11 @@ body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden
-	
 }
 
 body {
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	font-weight: bold;
 	background-image: url("images/main_background_two.jpg");
 	background-size: cover;
 	background-position: center;
@@ -43,6 +44,14 @@ body {
 
 ul {
 	list-style-type: none;
+}
+
+button {
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	cursor: pointer;
+	user-select: none;
+	border: none;
+	font-weight: bold;
 }
 
 /*------------------------------------------ header -----------------------------------------------*/
@@ -63,18 +72,18 @@ ul {
 	cursor: pointer;
 }
 
-.header i:active{
+.header i:active {
 	transform: scale(0.95);
 }
 
 /*------------------------------------------ actions -----------------------------------------------*/
 
-.actions_buttons{
+.actions_buttons {
 	display: flex;
 	align-items: center;
 }
 
-.actions_buttons i{
+.actions_buttons i {
 	font-size: 4.5vh;
 }
 
@@ -100,7 +109,7 @@ ul {
 }
 
 .menu__wrapper_body {
-   height: 100%;
+	height: 100%;
 }
 
 /*------------------------------------------ themes -----------------------------------------------*/
@@ -115,7 +124,6 @@ ul {
 }
 
 .themes h1 {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.8vh;
 	padding-top: 1vh;
 	margin: 0;
@@ -134,12 +142,8 @@ ul {
 .themes_icons button {
 	font-size: 2.4vh;
 	border-radius: 1vh;
-	user-select: none;
 	padding-left: 4vw;
 	padding-right: 4vw;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	font-weight: bold;
-	border: 0;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 }
 
@@ -171,7 +175,10 @@ ul {
 
 /*------------------------------------------ saves -----------------------------------------------*/
 
-.saves {
+/*------------------------------------------ items -----------------------------------------------*/
+
+
+.items {
 	width: 55vw;
 	text-align: center;
 	margin-top: 2vh;
@@ -180,54 +187,48 @@ ul {
 	height: 100%;
 }
 
-.saves__head {
+.items__head {
 	width: 100%;
 	display: flex;
 }
 
-.saves h1 {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+.items h1,
+.items h2 {
 	font-size: 2.8vh;
 	width: 100%;
 	text-align: center;
 }
 
-.saves__button button{
-   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	font-size: 2.4vh;
-	text-align: center;
-	background-color: rgb(220, 220, 220);
-	margin: 2vh 0;
-	padding-left: 3vw;
-	padding-right: 3vw;
-	border-radius: 1vh;
+.items__button button {
 	width: fit-content;
-	cursor: pointer;
-	user-select: none;
-	border: 0;
-	font-weight: bold;
+	margin: 2vh 0;
+	padding: 0 3vw;
+	text-align: center;
+	font-size: 2.4vh;
+	border-radius: 1vh;
+	background-color: rgb(220, 220, 220);
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 
 }
 
-.saves__button button:active{
-   transform: scale(0.94);
+.items__button button:active {
+	transform: scale(0.94);
 	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
-.save {
+.item {
 	margin-top: 0.8vh;
 	transition: background-color .2s;
 	border-radius: 5px;
 	box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.4);
 }
 
-.save.active {
+.item.active {
 	background-color: rgba(220, 220, 220, 1);
 	transition: background-color .2s;
 }
 
-.save_main-body {
+.item__body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -235,32 +236,27 @@ ul {
 	padding-left: 1vw;
 }
 
-.save i {
+.item i {
 	font-size: 2.6vh;
 }
 
-.save h1 {
+.item h2 {
 	font-size: 2.4vh;
 }
 
-.save button {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	cursor: pointer;
+.item button {
 	font-size: 2.2vh;
 	background-color: rgba(220, 220, 220, 1);
 	border-radius: 5px;
 	padding: 0 1.5vw;
-	user-select: none;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
-	border: 0;
-	font-weight: bold;
 }
 
-.save button:active {
+.item button:active {
 	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
-.save_toolbar {
+.item__toolbar {
 	width: 55vw;
 	display: none;
 	justify-content: space-evenly;
@@ -269,7 +265,7 @@ ul {
 	opacity: 0;
 }
 
-.save.active .save_toolbar {
+.item.active .item__toolbar {
 	display: flex;
 	animation: switchOn .3s;
 	margin-top: 1.2vh;
@@ -277,7 +273,7 @@ ul {
 
 }
 
-.save.disactive .save_toolbar {
+.item.disactive .item__toolbar {
 	animation: switchOFF .3s;
 	display: flex;
 }
@@ -310,38 +306,32 @@ ul {
 	}
 }
 
-.save_toolbar button {
+.item__toolbar button {
 	font-size: 2.2vh;
-	border: 0 !important;
 	border-radius: 5px;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	padding-left: 1vw;
-	padding-right: 1vw;
-	cursor: pointer;
-	margin-top: -0.5vh;
-	margin-bottom: -0.5vh;
+	padding: 0 1vw;
+	margin: -0.5vh 0;
 	background-color: rgba(180, 180, 180, 1)
 }
 
 /*------------------------------------------ additionals -----------------------------------------------*/
 
-.additionals{
+.additionals {
 	display: flex;
 	justify-content: space-evenly;
 	padding: 1vh 0;
 	width: 100%;
 }
 
-.additionals button{
+.additionals button {
 	background-color: rgba(0, 0, 0, 0);
-	border: 0;
 }
 
-.additionals button:active{
+.additionals button:active {
 	transform: scale(0.92);
 }
 
-.additionals i{
+.additionals i {
 	font-size: 4vh;
 	text-shadow: rgba(0, 0, 0, 0.2) 0.3vh 0.3vh 0.6vh;
 }
@@ -350,16 +340,15 @@ ul {
 
 .plus__wrapper {
 	position: fixed;
-    top: 7vh;
-    width: 60vw;
-    background-color: white;
-    transform: translateX(0vw);
-    transition: transform .3s;
-    height: calc(100% - 7vh);
-    background-color: rgba(200, 200, 200, 0.99);
-    right: -60vw;
-    z-index: 1;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	top: 7vh;
+	width: 60vw;
+	background-color: white;
+	transform: translateX(0vw);
+	transition: transform .3s;
+	height: calc(100% - 7vh);
+	background-color: rgba(200, 200, 200, 0.99);
+	right: -60vw;
+	z-index: 1;
 }
 
 .plus__wrapper.open {
@@ -402,30 +391,23 @@ input[type="number"]::-webkit-inner-spin-button {
 	margin: 0;
 }
 
-.plus__wrapper button {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+.plus__wrapper-btn {
 	font-size: 2.4vh;
 	text-align: center;
 	background-color: rgb(220, 220, 220);
 	margin: auto;
-	padding-left: 3vw;
-	padding-right: 3vw;
+	padding: 0 3vw;
 	border-radius: 1vh;
 	width: fit-content;
-	cursor: pointer;
-	user-select: none;
-	border: 0;
-	font-weight: bold;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
 }
 
-.plus__wrapper button:active {
+.plus__wrapper-btn:active {
 	transform: scale(0.94);
 	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
 .plus__wrapper_random {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	width: 100%;
 	text-align: center;
 	font-size: 2.8vh;
@@ -443,75 +425,18 @@ input[type="number"]::-webkit-inner-spin-button {
 /*------------------------------------------ sketches -----------------------------------------------*/
 
 
-.plus__wrapper_sketches{
-	padding-left: 2.5vw;
-   padding-right: 2.5vw;
-   margin-top: 2vh;
-}
-
-.plus__wrapper_sketches_head{
-	text-align: center;
-	margin-bottom: 1vh;
-}
-
-.sketch{
-	display: flex;
-	align-items: center;
-	margin-top: 0.8vh;
-	padding-right: 1.5vw;
-	border-radius: 5px;
-    box-shadow: 0.2vh 0.2vh 0.7vh rgb(0 0 0 / 40%);
-}
-
-.sketch button{
-	padding: 0 1.5vw;
-	margin: 0;
-	font-size: 2.2vh;
-    background-color: rgba(220, 220, 220, 1);
-    border-radius: 5px;
-    user-select: none;
-    box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
-    border: 0;
-    font-weight: bold;
-}
-
-.sketch h2{
-	margin: 0 auto;
-}
-
-.sketch i{
-	font-size: 2.8vh;
-	text-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
-	cursor: pointer;
-}
-
-.sketch i:active{
-	transform: scale(0.92);
-}
-
-.plus__wrapper_sketches_button{
-	width: 100%;
-	margin-top: 1.5vh;
-	display: flex;
-	justify-content: baseline;
-}
 
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
 	margin: 0 auto;
-	text-align: center;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	display: flex;
-	align-items: center;
-	display: block;
 }
 
 .main_logo img {
 	box-sizing: border-box;
 	max-height: 100%;
 	padding: 1vh;
-	filter: brightness(0)
+	filter: brightness(0);
 }
 
 .main_logo h1 {
@@ -532,7 +457,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements {
 	width: 100%;
-   height: calc(100% - 7vh);
+	height: calc(100% - 7vh);
 }
 
 .elements__head {
@@ -543,12 +468,10 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements__head button {
 	font-size: 3.5vh;
-	cursor: pointer;
-	background-color: rgb(180, 180, 180);
-	border-radius: 1vh;
 	padding: 1vh;
+	border-radius: 1vh;
+	background-color: rgb(180, 180, 180);
 	box-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh;
-	border: 0;
 	text-shadow: rgb(0 0 0 / 40%) 0.3vh 0.3vh 0.6vh;
 }
 
@@ -558,51 +481,34 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements__title {
 	font-size: 5vh;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	margin: 0;
 	text-align: center;
-	margin-right: 3vh;
-	margin-left: 3vh;
+	margin: 0 3vh;
 	color: rgb(220, 220, 220);
 }
 
 .elements__list {
 	width: 88vw;
 	height: 85%;
-	margin-left: 6vw;
-	margin-right: 6vw;
-	margin-bottom: 6vw;
+	margin: 0 6vw 6vw;
 	font-size: 2.5vh;
 	color: black;
 }
 
-.elements__list p {
-	padding: 0;
-	margin: 0;
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-	opacity: none;
-	font-weight: bold;
-	color: black !important;
-	background: none;
-}
-
 .elements__item {
+	position: relative;
+	display: flex;
+	margin: 0.5vh 0.4vh 0.4vh;
 	border-radius: 2px;
 	background-color: white;
 	background-color: rgba(255, 255, 255, 0.6);
-	margin: 0.4vh;
-	display: flex;
-	margin-top: 0.5vh;
-	position: relative;
 }
 
 .elements__item i {
-	font-size: 0.9vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	margin-left: 2vw;
-	margin-right: 2vw;
+	margin: 0 2vw;
+	font-size: 0.9vh;
 	cursor: pointer;
 	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh;
 }
@@ -620,34 +526,13 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements__item-buttons button {
 	font-size: 2.3vh;
-	border: none;
 	background: none;
 	margin-right: 2vw;
 	text-shadow: rgba(0, 0, 0, 0.4) 0.1vh 0.1vh 0.2vh;
-	cursor: pointer;
 }
 
 .elements__item-buttons button:active {
 	transform: scale(0.92);
-}
-
-button.button__test {
-	margin-top: 15px;
-	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
-}
-
-button.button__test:active {
-	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
-	transform: none;
-}
-
-.draggable-source--is-dragging {
-	visibility: none;
-	opacity: 0;
-}
-
-.draggable-mirror {
-	width: 88vw;
 }
 
 .sortable-ghost {
