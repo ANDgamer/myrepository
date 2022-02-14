@@ -1,16 +1,16 @@
 // FOR ANDREY - start
 
 // Максимальна кількість елементів
-const maxElems = 20
+const maxElems = 15
 
 // Максимальна кількість сейвів
-const maxSaves = 20
+const maxSaves = 9
 
 // Максимальна кількість темплейтів(по твому ескізи, хоча до чого тут вони, ескізи це ж про художнє мистецтво)))
-const maxSketch = 20
-
+const maxSketch = 8
 
 // FOR ANDREY - end
+
 
 const timeoutAnimation = 200
 const selectorAnimation = "active"
@@ -158,19 +158,22 @@ const initDeleteAllEvent = (btn, list) => {
 	btn.addEventListener("click", () => clearList(list))
 }
 
-const initAddEvent = (btn, list, itemHTML, nameSelector, name) => {
+const initAddEvent = (btn, list, itemHTML, nameSelector, name, maxCount) => {
 	btn.addEventListener("click", () => {
+		if (list.childElementCount < gi maxCount) {
+			list.innerHTML += itemHTML
+			const itemName = list.lastChild.querySelector(nameSelector)
+			itemName.textContent += name()
+			const deleteBtns = list.querySelectorAll(".delete-btn")
+			const itemSelector = list.lastChild.classList[0]
+			console.log(itemSelector)
 
-		list.innerHTML += itemHTML
-		const itemName = list.lastChild.querySelector(nameSelector)
-		itemName.textContent += name()
-		const deleteBtns = list.querySelectorAll(".delete-btn")
-		const itemSelector = list.lastChild.classList[0]
-		console.log(itemSelector)
+			initDeleteEvent(deleteBtns, list, "." + itemSelector)
 
-		initDeleteEvent(deleteBtns, list, "." + itemSelector)
-
-		addAnimation(list.childNodes, timeoutAnimation, selectorAnimation);
+			addAnimation(list.childNodes, timeoutAnimation, selectorAnimation);
+		} else {
+			alert(`Максимальна к-сть ${maxCount}`)
+		}
 	});
 }
 
@@ -190,8 +193,8 @@ initDeleteEvent(elemsDeleteBtns, elemsList, ".elements__item");
 initDeleteEvent(savesDeleteBtns, savesList, ".save");
 initDeleteEvent(sketchesDeleteBtns, sketchesList, ".sketch");
 
-initAddEvent(elemsAddBtn, elemsList, elemItemHTML, ".elements__name", () => random(elems))
-initAddEvent(savesAddBtn, savesList, saveItemHTML, ".save__name", () => savesList.childElementCount)
-initAddEvent(sketchesAddBtn, sketchesList, sketchItemHTML, ".sketch__name", () => sketchesList.childElementCount)
+initAddEvent(elemsAddBtn, elemsList, elemItemHTML, ".elements__name", () => random(elems), maxElems)
+initAddEvent(savesAddBtn, savesList, saveItemHTML, ".save__name", () => savesList.childElementCount, maxSaves)
+initAddEvent(sketchesAddBtn, sketchesList, sketchItemHTML, ".sketch__name", () => sketchesList.childElementCount, maxSketch)
 
 window.addEventListener("click", detectCloseMenu)
