@@ -160,7 +160,7 @@ const initDeleteAllEvent = (btn, list) => {
 
 const initAddEvent = (btn, list, itemHTML, nameSelector, name, maxCount) => {
 	btn.addEventListener("click", () => {
-		if (list.childElementCount < gi maxCount) {
+		if (list.childElementCount < maxCount) {
 			list.innerHTML += itemHTML
 			const itemName = list.lastChild.querySelector(nameSelector)
 			itemName.textContent += name()
