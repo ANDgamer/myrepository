@@ -99,6 +99,10 @@ ul {
 	transform: translateX(60vw);
 }
 
+.menu__wrapper_body {
+   height: 100%;
+}
+
 /*------------------------------------------ themes -----------------------------------------------*/
 
 .themes {
@@ -173,6 +177,7 @@ ul {
 	margin-top: 2vh;
 	padding-left: 2.5vw;
 	padding-right: 2.5vw;
+	height: 100%;
 }
 
 .saves__head {
@@ -180,27 +185,34 @@ ul {
 	display: flex;
 }
 
-.saves__head button {
-	font-size: 3vh;
-	position: fixed;
-	cursor: pointer;
-	margin-left: 1vw;
-	background: none;
-	border: 0;
-	margin-top: 0.8vh;
-	margin-bottom: 0.8vh;
-	text-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
-}
-
-.saves__head button:active {
-	transform: scale(0.92);
-}
-
 .saves h1 {
 	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-size: 2.8vh;
 	width: 100%;
 	text-align: center;
+}
+
+.saves__button button{
+   font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	font-size: 2.4vh;
+	text-align: center;
+	background-color: rgb(220, 220, 220);
+	margin: 2vh 0;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	border-radius: 1vh;
+	width: fit-content;
+	cursor: pointer;
+	user-select: none;
+	border: 0;
+	font-weight: bold;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
+
+}
+
+.saves__button button:active{
+   transform: scale(0.94);
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 }
 
 .save {
@@ -419,7 +431,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: 100%;
 	text-align: center;
 	font-size: 2.8vh;
-	margin-top: 1vh;
+	margin-top: 2vh;
 	width: 55vw;
 	padding-left: 2.5vw;
 	padding-right: 2.5vw;
@@ -435,18 +447,19 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .plus__wrapper_sketches{
 	padding-left: 2.5vw;
-    padding-right: 2.5vw
+   padding-right: 2.5vw;
+   margin-top: 2vh;
 }
 
 .plus__wrapper_sketches_head{
 	text-align: center;
-	margin: 1vh 0;
+	margin-bottom: 1vh;
 }
 
 .sketch{
 	display: flex;
 	align-items: center;
-	margin-top: 0.6vh;
+	margin-top: 0.8vh;
 	padding-right: 1.5vw;
 	border-radius: 5px;
     box-shadow: 0.2vh 0.2vh 0.7vh rgb(0 0 0 / 40%);
