@@ -7,6 +7,7 @@ content:
 	1) themes
 	2) saves
 	3) additionals
+	4) sketches
 4. body
 */
 
@@ -237,8 +238,7 @@ ul {
 	font-size: 2.2vh;
 	background-color: rgba(220, 220, 220, 1);
 	border-radius: 5px;
-	padding-left: 1vw;
-	padding-right: 1vw;
+	padding: 0 1vw;
 	user-select: none;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 	border: 0;
@@ -398,8 +398,8 @@ input[type="number"]::-webkit-inner-spin-button {
 	text-align: center;
 	background-color: rgb(220, 220, 220);
 	margin: auto;
-	padding-left: 4vw;
-	padding-right: 4vw;
+	padding-left: 3vw;
+	padding-right: 3vw;
 	border-radius: 1vh;
 	width: fit-content;
 	cursor: pointer;
@@ -428,6 +428,61 @@ input[type="number"]::-webkit-inner-spin-button {
 .plus__wrapper_random>div {
 	display: flex;
 	align-items: center;
+}
+
+/*------------------------------------------ sketches -----------------------------------------------*/
+
+
+.plus__wrapper_sketches{
+	padding-left: 2.5vw;
+    padding-right: 2.5vw
+}
+
+.plus__wrapper_sketches_head{
+	text-align: center;
+	margin: 1vh 0;
+}
+
+.sketch{
+	display: flex;
+	align-items: center;
+	margin-top: 0.6vh;
+	padding-right: 1.5vw;
+	border-radius: 5px;
+    box-shadow: 0.2vh 0.2vh 0.7vh rgb(0 0 0 / 40%);
+}
+
+.sketch button{
+	padding: 0 1.5vw;
+	margin: 0;
+	font-size: 2.2vh;
+    background-color: rgba(220, 220, 220, 1);
+    border-radius: 5px;
+    user-select: none;
+    box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+    border: 0;
+    font-weight: bold;
+}
+
+.sketch h2{
+	margin: 0 auto;
+}
+
+.sketch i{
+	font-size: 2.8vh;
+	text-shadow: rgba(0, 0, 0, 0.3) 0.3vh 0.3vh 0.6vh;
+	cursor: pointer;
+}
+
+.sketch i:active{
+	transform: scale(0.92);
+}
+
+.plus__wrapper_sketches_button{
+	width: 100%;
+	margin-top: 1.5vh;
+	display: flex;
+	justify-content: baseline;
 }
 
 /*------------------------------------------ /wrappers -----------------------------------------------*/
