@@ -12,12 +12,11 @@ const maxSketch = 20
 
 // FOR ANDREY - end
 
-
-
+const timeoutAnimation = 200
+const selectorAnimation = "active"
 
 const openersMenu = document.querySelectorAll(".opener")
 const menus = document.querySelectorAll(".menu")
-
 
 const elemsList = document.querySelector(".elements__list")
 const savesList = document.querySelector(".saves__body")
@@ -106,7 +105,7 @@ const initOpenMenu = (btn) => {
 	})
 }
 
-const addAnimation = (items, duration, selector) => {
+const addAnimation = (items, timeout, selector) => {
 	items.forEach(item => {
 		item.addEventListener("click", (e) => {
 			if (e.target.tagName === "BUTTON") return
@@ -123,7 +122,7 @@ const addAnimation = (items, duration, selector) => {
 				item.classList.add("dis" + selector)
 				setTimeout(() => {
 					item.classList.remove("dis" + selector)
-				}, duration)
+				}, timeout)
 				return
 			}
 			item.classList.toggle(selector)
@@ -145,7 +144,6 @@ const detectCloseMenu = (e) => {
 const clearList = list => list.innerHTML = ''
 
 const initDeleteEvent = (btns, list, itemSelector) => {
-	console.log(btns, list)
 	btns.forEach(btn => {
 		btn.addEventListener("click", () => {
 			const item = btn.closest(itemSelector)
@@ -167,7 +165,12 @@ const initAddEvent = (btn, list, itemHTML, nameSelector, name) => {
 		const itemName = list.lastChild.querySelector(nameSelector)
 		itemName.textContent += name()
 		const deleteBtns = list.querySelectorAll(".delete-btn")
-		// initDeleteEvent(deleteBtns, list, itemSelector)
+		const itemSelector = list.lastChild.classList[0]
+		console.log(itemSelector)
+
+		initDeleteEvent(deleteBtns, list, "." + itemSelector)
+
+		addAnimation(list.childNodes, timeoutAnimation, selectorAnimation);
 	});
 }
 
@@ -176,8 +179,8 @@ const initAddEvent = (btn, list, itemHTML, nameSelector, name) => {
 
 openersMenu.forEach(initOpenMenu);
 
-addAnimation(savesList.childNodes, 200, "active");
-addAnimation(sketchesList.childNodes, 200, "active");
+addAnimation(savesList.childNodes, timeoutAnimation, selectorAnimation);
+addAnimation(sketchesList.childNodes, timeoutAnimation, selectorAnimation);
 
 initDeleteAllEvent(elemsDeleteAllBtn, elemsList);
 initDeleteAllEvent(savesDeleteAllBtn, savesList);
