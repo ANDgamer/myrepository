@@ -132,8 +132,11 @@ const addAnimation = (items, timeout, selector) => {
 
 const detectCloseMenu = (e) => {
 	const targetMenu = e.target.closest(".menu")
-	if (!e.target.classList.contains("opener") && !targetMenu) {
+	if (!e.target.classList.contains("opener") && !targetMenu && e.target.id !== "saves-add") {
 		menus.forEach(m => {
+			// if (m.classList.contains("menu__wrapper") &&
+			// m.classList.contains("open") &&
+			// e.target.id === "saves-add") return
 			if (m.classList.contains("open")) {
 				m.classList.remove("open")
 			}
@@ -164,10 +167,9 @@ const initAddEvent = (btn, list, itemHTML, nameSelector, name, maxCount) => {
 			list.innerHTML += itemHTML
 			const itemName = list.lastChild.querySelector(nameSelector)
 			itemName.textContent += name()
+
 			const deleteBtns = list.querySelectorAll(".delete-btn")
 			const itemSelector = list.lastChild.classList[0]
-			console.log(itemSelector)
-
 			initDeleteEvent(deleteBtns, list, "." + itemSelector)
 
 			addAnimation(list.childNodes, timeoutAnimation, selectorAnimation);
