@@ -216,7 +216,7 @@ ul {
 }
 
 .save {
-	margin-top: 0.6vh;
+	margin-top: 0.8vh;
 	transition: background-color .2s;
 	border-radius: 5px;
 	box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.4);
@@ -228,12 +228,11 @@ ul {
 }
 
 .save_main-body {
-	width: 55vw;
 	display: flex;
-	justify-content: left;
+	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
-	padding-left: 0.5vh;
+	padding-left: 1vw;
 }
 
 .save i {
@@ -250,12 +249,11 @@ ul {
 	font-size: 2.2vh;
 	background-color: rgba(220, 220, 220, 1);
 	border-radius: 5px;
-	padding: 0 1vw;
+	padding: 0 1.5vw;
 	user-select: none;
 	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
 	border: 0;
 	font-weight: bold;
-	margin-right: 1vh;
 }
 
 .save button:active {
