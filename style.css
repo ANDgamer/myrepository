@@ -262,7 +262,7 @@ button {
 }
 
 .item__toolbar {
-	width: 55vw;
+	width: 100%;
 	display: none;
 	justify-content: space-evenly;
 	margin-top: -3.8vh;
@@ -437,7 +437,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .sketches__body {
 	height: 38vh;
     overflow-y: scroll;
-	border: none;
 	padding: 1vh;
 }
 
@@ -446,7 +445,8 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 ::-webkit-scrollbar {
-	width: 4px;
+	width: 5px;
+	border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 20px;
