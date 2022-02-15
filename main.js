@@ -1,13 +1,13 @@
 // FOR ANDREY - start
 
 // Максимальна кількість елементів
-const maxElems = 15
+const maxElems = 50
 
 // Максимальна кількість сейвів
-const maxSaves = 9
+const maxSaves = 50
 
 // Максимальна кількість темплейтів(по твому ескізи, хоча до чого тут вони, ескізи це ж про художнє мистецтво)))
-const maxSketch = 8
+const maxSketch = 50
 
 // FOR ANDREY - end
 
@@ -63,9 +63,9 @@ const saveItemHTML = `
 const sketchItemHTML = `
 	<div class="sketch item">
 		<div class="sketch_main-body item__body">
-			<i class="fas fa-save"></i>
-			<h2 class="sketch__name">Sketch </h2>
 			<button>use</button>
+			<h2 class="sketch__name">Sketch </h2>
+			<i class="fas fa-save"></i>
 		</div>
 		<div class="sketch_toolbar item__toolbar">
 			<div>

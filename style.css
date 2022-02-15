@@ -199,9 +199,14 @@ button {
 	text-align: center;
 }
 
+.items__button{
+	display: flex;
+	justify-content: space-evenly;
+}
+
 .items__button button {
 	width: fit-content;
-	margin: 2vh 0;
+	margin: 1vh 0;
 	padding: 0 3vw;
 	text-align: center;
 	font-size: 2.4vh;
@@ -424,7 +429,29 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /*------------------------------------------ sketches -----------------------------------------------*/
 
+.sketches{
+	padding: 0 1vw;
+	width: 58vw;
+}
 
+.sketches__body {
+	height: 38vh;
+    overflow-y: scroll;
+	border: none;
+	padding: 1vh;
+}
+
+.sketch_main-body{
+	padding: 0 1vw 0 0;
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: black;
+}
 
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
