@@ -453,6 +453,12 @@ input[type="number"]::-webkit-inner-spin-button {
 	background-color: black;
 }
 
+@media (max-width: 500px){
+	.sketches__body{
+		height: 34vh;
+	}
+}
+
 /*------------------------------------------ /wrappers -----------------------------------------------*/
 
 .main_logo {
