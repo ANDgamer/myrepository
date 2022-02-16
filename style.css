@@ -434,10 +434,14 @@ input[type="number"]::-webkit-inner-spin-button {
 	width: 58vw;
 }
 
-.sketches__body {
+.items__body {
 	height: 38vh;
-    overflow-y: scroll;
+  overflow-y: scroll;
 	padding: 1vh;
+}
+
+.saves__body{
+  height: 62vh;
 }
 
 .sketch_main-body{
@@ -456,6 +460,9 @@ input[type="number"]::-webkit-inner-spin-button {
 @media (max-width: 500px){
 	.sketches__body{
 		height: 30vh;
+	}
+	.saves__body{
+	  height: 54vh;
 	}
 }
 
@@ -521,10 +528,15 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .elements__list {
 	width: 88vw;
-	height: 85%;
+	height: calc(100% - 12vh);
 	margin: 0 6vw 6vw;
 	font-size: 2.5vh;
 	color: black;
+	overflow-y: scroll;
+}
+
+.elements__list::-webkit-scrollbar-thumb {
+	background-color: white;
 }
 
 .elements__item {
