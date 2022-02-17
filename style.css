@@ -435,7 +435,7 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .items__body {
-	height: calc(100% - 54vh);
+	height: calc(100% - 55vh);
     overflow-y: scroll;
 	padding: 1vh;
 }
