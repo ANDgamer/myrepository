@@ -1,0 +1,105 @@
+.menu__wrapper {
+	position: fixed;
+	top: 7vh;
+	width: 60vw;
+	background-color: rgba(200, 200, 200, 0.99);
+	transform: translateX(0vw);
+	transition: transform .3s;
+	height: calc(100% - 7vh);
+	left: -60vw;
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.menu__wrapper.open {
+	transform: translateX(60vw);
+}
+
+.menu__wrapper_body {
+	height: 100%;
+}
+
+/*------------------------------------------ themes -----------------------------------------------*/
+
+.themes {
+	width: 60vw;
+	text-align: center;
+}
+
+.themes_icons h1 {
+	cursor: pointer;
+}
+
+.themes h1 {
+	font-size: 2.8vh;
+	padding-top: 1vh;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 4vw;
+	padding-right: 4vw;
+}
+
+.themes_icons {
+	width: 60vw;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.themes_icons button {
+	font-size: 2.4vh;
+	border-radius: 1vh;
+	padding-left: 4vw;
+	padding-right: 4vw;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
+}
+
+.themes_icons button:active {
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+}
+
+.white-theme_icon,
+.black-theme_icon {
+	padding-bottom: 1vh;
+	border-bottom: 0.3vh solid black;
+}
+
+.black-theme_icon {
+	border: 0 !important;
+}
+
+.white-theme_icon button {
+	color: rgb(0, 0, 0);
+	background-color: rgba(255, 255, 255, 0.5);
+	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 0.8vh;
+}
+
+.black-theme_icon button {
+	color: rgb(255, 255, 255);
+	background-color: rgba(0, 0, 0, 0.5);
+	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 1vh;
+}
+
+/*------------------------------------------ additional -----------------------------------------------*/
+
+.additionals {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 1vh 0;
+	width: 100%;
+}
+
+.additionals button {
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.additionals button:active {
+	transform: scale(0.92);
+}
+
+.additionals i {
+	font-size: 4vh;
+	text-shadow: rgba(0, 0, 0, 0.2) 0.3vh 0.3vh 0.6vh;
+}

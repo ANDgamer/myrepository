@@ -1,0 +1,107 @@
+*,
+*:after,
+*:before {
+	padding: 0;
+	margin: 0;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body>div>a>img {
+	display: none;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden
+}
+
+body {
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	font-weight: bold;
+	background-image: url("images/main_background_two.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+ul {
+	list-style-type: none;
+}
+
+button {
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+	cursor: pointer;
+	user-select: none;
+	border: none;
+	font-weight: bold;
+}
+
+.header {
+	top: 0;
+	width: 100%;
+	height: 7vh;
+	background-color: rgba(200, 200, 200, 0.99);
+	display: flex;
+	color: black;
+	z-index: 1;
+}
+
+.header i {
+	font-size: 5vh;
+	margin: 1vh;
+	cursor: pointer;
+}
+
+.header i:active {
+	transform: scale(0.95);
+}
+
+.main_logo {
+	margin: 0 auto;
+}
+
+.main_logo h1 {
+	margin: 0;
+	width: 100%;
+}
+
+.main_logo img {
+	box-sizing: border-box;
+	max-height: 100%;
+	padding: 1vh;
+	filter: brightness(0);
+}
+
+/*------------------------------------------ scrolls -----------------------------------------------*/
+
+.items__body {
+	height: calc(100% - 55vh);
+  overflow-y: scroll;
+	padding: 1vh;
+}
+
+.saves__body{
+  height: 62vh;
+}
+
+.sketch_main-body{
+	padding: 0 1vw 0 0;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 20px;
+	background-color: black;
+}
+
+@media (max-width: 500px) {
+	.saves__body{
+	  height: 54vh;
+	}
+}

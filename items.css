@@ -1,0 +1,140 @@
+.items {
+	width: 55vw;
+	text-align: center;
+	margin-top: 2vh;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	height: 100%;
+}
+
+.items__head {
+	width: 100%;
+	display: flex;
+}
+
+.items h1,
+.items h2 {
+	font-size: 2.8vh;
+	width: 100%;
+	text-align: center;
+}
+
+.items__button{
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.items__button button {
+	width: fit-content;
+	margin: 1vh 0;
+	padding: 0 3vw;
+	text-align: center;
+	font-size: 2.4vh;
+	border-radius: 1vh;
+	background-color: rgb(220, 220, 220);
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
+
+}
+
+.items__button button:active {
+	transform: scale(0.94);
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+}
+
+.item {
+	margin-top: 0.8vh;
+	transition: background-color .2s;
+	border-radius: 5px;
+	box-shadow: 0.2vh 0.2vh 0.7vh rgba(0, 0, 0, 0.4);
+}
+
+.item.active {
+	background-color: rgba(220, 220, 220, 1);
+	transition: background-color .2s;
+}
+
+.item__body {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+	padding-left: 1vw;
+}
+
+.item i {
+	font-size: 2.6vh;
+}
+
+.item h2 {
+	font-size: 2.4vh;
+}
+
+.item button {
+	font-size: 2.2vh;
+	background-color: rgba(220, 220, 220, 1);
+	border-radius: 5px;
+	padding: 0 1.5vw;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+}
+
+.item button:active {
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+}
+
+.item__toolbar {
+	width: 100%;
+	display: none;
+	justify-content: space-evenly;
+	margin-top: -3.8vh;
+	padding-bottom: 1.2vh;
+	opacity: 0;
+}
+
+.item.active .item__toolbar {
+	display: flex;
+	animation: switchOn .3s;
+	margin-top: 1.2vh;
+	opacity: 1;
+
+}
+
+.item.disactive .item__toolbar {
+	animation: switchOFF .3s;
+	display: flex;
+}
+
+@keyframes switchOn {
+	from {
+		margin-top: -3.8vh;
+		opacity: 0;
+	}
+
+	to {
+		margin-top: 1.2vh;
+		opacity: 1;
+	}
+}
+
+@keyframes switchOFF {
+
+	0% {
+		margin-top: 1.2vh;
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	100% {
+		margin-top: -3.8vh;
+	}
+}
+
+.item__toolbar button {
+	font-size: 2.2vh;
+	border-radius: 5px;
+	padding: 0 1vw;
+	margin: -0.5vh 0;
+	background-color: rgba(180, 180, 180, 1)
+}

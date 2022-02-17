@@ -1,0 +1,90 @@
+.plus__wrapper {
+	position: fixed;
+	top: 7vh;
+	width: 60vw;
+	background-color: white;
+	transform: translateX(0vw);
+	transition: transform .3s;
+	height: calc(100% - 7vh);
+	background-color: rgba(200, 200, 200, 0.99);
+	right: -60vw;
+	z-index: 1;
+}
+
+.plus__wrapper.open {
+	transform: translateX(-60vw);
+}
+
+.plus__wrapper_manual {
+	width: 55vw;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+	text-align: center;
+}
+
+.plus__wrapper h1 {
+	width: 100%;
+	text-align: center;
+	font-size: 2.8vh;
+}
+
+.choose-jump {
+	display: flex;
+	align-items: center;
+}
+
+.plus__wrapper h2 {
+	font-size: 2.4vh;
+}
+
+.plus__wrapper_checkbox,
+.plus__wrapper_number {
+	width: 2.8vh;
+	height: 2.8vh;
+	margin-left: auto;
+	text-align: center;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.plus__wrapper-btn {
+	font-size: 2.4vh;
+	text-align: center;
+	background-color: rgb(220, 220, 220);
+	margin: auto;
+	padding: 0 3vw;
+	border-radius: 1vh;
+	width: fit-content;
+	box-shadow: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
+}
+
+.plus__wrapper-btn:active {
+	transform: scale(0.94);
+	box-shadow: inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh;
+}
+
+.plus__wrapper_random {
+	width: 100%;
+	text-align: center;
+	font-size: 2.8vh;
+	margin-top: 2vh;
+	width: 55vw;
+	padding-left: 2.5vw;
+	padding-right: 2.5vw;
+}
+
+.plus__wrapper_random>div {
+	display: flex;
+	align-items: center;
+}
+
+/*------------------------------------------ sketches -----------------------------------------------*/
+
+.sketches{
+	padding: 0 1vw;
+	width: 58vw;
+}
