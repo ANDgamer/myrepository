@@ -2,11 +2,11 @@
 	position: fixed;
 	top: 7vh;
 	width: 60vw;
-	background-color: white;
+	background-color: var(--color-white);
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: calc(100% - 7vh);
-	background-color: rgba(200, 200, 200, 0.99);
+	background-color: var(--main-color-white);
 	right: -60vw;
 	z-index: 1;
 }

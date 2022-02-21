@@ -43,12 +43,12 @@
 	height: calc(100% - 12vh);
 	margin: 0 6vw 6vw;
 	font-size: 2.5vh;
-	color: black;
+	color: var(--color-black);
 	overflow-y: scroll;
 }
 
 .elements__list::-webkit-scrollbar-thumb {
-	background-color: white;
+	background-color: var(--color-white);
 }
 
 .elements__item {
@@ -56,7 +56,7 @@
 	display: flex;
 	margin: 0.5vh 0.4vh 0.4vh;
 	border-radius: 2px;
-	background-color: white;
+	background-color: var(--color-white);
 	background-color: rgba(255, 255, 255, 0.6);
 }
 

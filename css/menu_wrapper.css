@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 7vh;
 	width: 60vw;
-	background-color: rgba(200, 200, 200, 0.99);
+	background-color: var(--main-color-white);
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: calc(100% - 7vh);
@@ -71,13 +71,13 @@
 }
 
 .white-theme_icon button {
-	color: rgb(0, 0, 0);
+	color: var(--color-black);
 	background-color: rgba(255, 255, 255, 0.5);
 	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 0.8vh;
 }
 
 .black-theme_icon button {
-	color: rgb(255, 255, 255);
+	color: var(--color-white);
 	background-color: rgba(0, 0, 0, 0.5);
 	box-shadow: rgba(0, 0, 0, 0.3) 0.4vh 0.4vh 1vh;
 }
