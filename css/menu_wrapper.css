@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 7vh;
 	width: 60vw;
-	background-color: var(--main-color-white);
+	background-color: var(--bg-color-white);
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: calc(100% - 7vh);

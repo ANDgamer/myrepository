@@ -1,5 +1,5 @@
 :root{
-	--main-color-white: rgba(200, 200, 200, 0.99);
+	--bg-color-white: rgba(200, 200, 200, 0.99);
 	--color-white: #fff;
 	--color-black: #000;
 }
@@ -9,6 +9,7 @@
 *:before {
 	padding: 0;
 	margin: 0;
+	-webkit-tap-highlight-color: #00000000;
 }
 
 body>div>a>img {
@@ -48,7 +49,7 @@ button {
 	top: 0;
 	width: 100%;
 	height: 7vh;
-	background-color: var(--main-color-white);
+	background-color: var(--bg-color-white);
 	display: flex;
 	color: black;
 	z-index: 1;

@@ -6,7 +6,7 @@
 	transform: translateX(0vw);
 	transition: transform .3s;
 	height: calc(100% - 7vh);
-	background-color: var(--main-color-white);
+	background-color: var(--bg-color-white);
 	right: -60vw;
 	z-index: 1;
 }
