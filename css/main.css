@@ -2,6 +2,9 @@
 	--bg-color-white: rgba(200, 200, 200, 0.99);
 	--color-white: #fff;
 	--color-black: #000;
+	--color-none:  rgba(0, 0, 0, 0);
+	--button-shadow-up: rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh, inset rgba(255, 255, 255, 0.5) 0.2vh 0.2vh 0.4vh 0px;
+	--button-shadow-bown:  inset rgb(0 0 0 / 30%) 0.3vh 0.3vh 0.6vh; 
 }
 
 *,
@@ -10,10 +13,6 @@
 	padding: 0;
 	margin: 0;
 	-webkit-tap-highlight-color: #00000000;
-}
-
-body>div>a>img {
-	display: none;
 }
 
 html,
@@ -26,11 +25,14 @@ body {
 }
 
 body {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	font-weight: bold;
 	background-image: url("../images/main_background_two.jpg");
 	background-size: cover;
 	background-position: center;
+}
+
+body, button{
+	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 }
 
 ul {
@@ -38,7 +40,6 @@ ul {
 }
 
 button {
-	font-family: 'IBM Plex Sans Thai Looped', sans-serif;
 	cursor: pointer;
 	user-select: none;
 	border: none;
@@ -66,19 +67,12 @@ button {
 }
 
 .main_logo {
-	margin: 0 auto;
-}
-
-.main_logo h1 {
-	margin: 0;
-	width: 100%;
+	margin: 1vh auto;
 }
 
 .main_logo img {
 	box-sizing: border-box;
 	max-height: 100%;
-	padding: 1vh;
-	filter: brightness(0);
 }
 
 /*------------------------------------------ scrolls -----------------------------------------------*/

@@ -48,7 +48,7 @@
 }
 
 .elements__list::-webkit-scrollbar-thumb {
-	background-color: var(--color-white);
+	background-color: var(--bg-color-white);
 }
 
 .elements__item {
