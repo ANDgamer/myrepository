@@ -22,7 +22,8 @@
 	font-size: 3.5vh;
 	padding: 1vh;
 	border-radius: 1vh;
-	background-color: rgb(180, 180, 180);
+	background-color: var(--bg-color-white);
+	opacity: 0.9!important;
 	box-shadow: rgba(0, 0, 0, 0.4) 0.3vh 0.3vh 0.6vh;
 	text-shadow: rgb(0 0 0 / 40%) 0.3vh 0.3vh 0.6vh;
 }
@@ -35,7 +36,8 @@
 	font-size: 5vh;
 	text-align: center;
 	margin: 0 3vh;
-	color: rgb(220, 220, 220);
+	color: var(--bg-color-white);
+	opacity: 0.9 !important;
 }
 
 .elements__list {
@@ -57,7 +59,8 @@
 	margin: 0.5vh 0.4vh 0.4vh;
 	border-radius: 2px;
 	background-color: var(--color-white);
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: var(--bg-color-white);
+	opacity: 0.9 !important;
 }
 
 .elements__item i {
